@@ -1,0 +1,10 @@
+#Ignorando archivos por extension
+
+*.o
+
+#Ignorando una carpeta
+
+/plplot
+/menu
+
+
