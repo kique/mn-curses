@@ -1,6 +1,8 @@
 #Ignorando archivos por extension
 
 *.o
+*.swp
+main
 
 #Ignorando una carpeta
 
