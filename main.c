@@ -6,6 +6,7 @@ int main()
     char opc,rep,trash;
 
     do{
+	system("clear");
         menu();
 	scanf("%c",&opc);
 
@@ -36,7 +37,8 @@ int main()
                 printf("\nOpcion Invalida\n");
         }
         printf("\n\nDeseas realizar otro calculo?: (s/n)");
-        scanf("%c",&rep);
+	//fpurge(stdin);
+        scanf(" %c",&rep);
 	getchar();
 //        scanf("%c",&rep);
         //scanf("%c %c",&rep);

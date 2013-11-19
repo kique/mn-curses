@@ -17,6 +17,6 @@ void menu(void)
     printf("\n4.- Metodo de Newton-Raphson");
     printf("\n5.- Metodo de la Secante");
 
-    printf("\n\n0.- Salir\n\n");
+    printf("\n\n6.- Salir\n\n");
 }
 
