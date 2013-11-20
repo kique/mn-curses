@@ -2,7 +2,8 @@
 
 *.o
 *.swp
-main
+metodos_bin
+makefileOLD
 
 #Ignorando una carpeta
 

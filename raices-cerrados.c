@@ -34,8 +34,8 @@ double biseccion(double xa, double xb, double es, double *ea, int imax, int *ite
   }
 
  *iter= 0;
-  xr = (xa + xb)/2.0;
-
+  //xr = (xa + xb)/2.0;
+  xr=0;
   do{
       xrold = xr;
       xr = (xa + xb)/2.0;
@@ -54,7 +54,7 @@ double biseccion(double xa, double xb, double es, double *ea, int imax, int *ite
       else
           *ea = 0;
 
-      //Se imprimen los datos de la tabla si el usuario lo desea tabla == 1
+      //Se imprimen los datos de la tabla si el usuario lo desea, tabla == 1
       if ( tabla == 1 ) {
            printf ("| %2d | %12.8lf | %12.8lf | %12.8lf | %12.8lf | %12.8lf\n", *iter, xa, xr, xb, *ea, f(xr) );
 	    }

@@ -69,7 +69,7 @@ entrada_cerrados (int op_met)
           rfalsa(xa, xb, es, &ea, imax, &iter, tabla);
       else if(tabla == 0)
           printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",
-          biseccion(xa, xb, es, &ea, imax, &iter, 0),ea,iter);
+          rfalsa(xa, xb, es, &ea, imax, &iter, 0),ea,iter);
       else
           printf("\nOpcion invalida, vuelva a intentar");
   }
