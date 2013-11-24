@@ -1,0 +1,22 @@
+Menu Principal:
+  1.-Localizar Raices
+  2.-Solucionar SEL
+  3.-Interpolacion
+  4.-Regresion
+  5.-Integración
+  6.-EDO
+  7.-Salir
+
+Localización de Raices
+
+Metodos Cerrados
+  1.-Bisección
+  2.-Regla Falsa
+
+Metodos Abiertos
+  1.-Punto Fijo
+  2.-Newton-Raphson
+  3.-Secante
+
+
+
