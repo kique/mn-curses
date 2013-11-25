@@ -29,8 +29,8 @@ double pfijo(double x0, double es, double *ea, int imax, int *iter, int tabla)
     }while(es > *ea && *iter <= imax);
 
     if ( tabla == 1 ) {
-        printf ("\n\nLa Raiz es %6.4lf en %d iteraciones\n",xr);
-        printf ("\n\nEl error relativo aproximado es %6.4lf\n",ea);
+        printf ("\n\nLa Raiz es %6.4lf en %d iteraciones\n",xr,*iter);
+        printf ("\n\nEl error relativo aproximado es %6.4lf\n",*ea);
         return;
     }
     else
@@ -62,8 +62,8 @@ double newtonrap(double x0, double es, double *ea, int imax, int *iter, int tabl
 	    }
     }while(es > *ea && *iter <= imax);
     if ( tabla == 1 ) {
-        printf ("\n\nLa Raiz es %6.4lf en %d iteraciones\n",x1);
-        printf ("\n\nEl error relativo aproximado es %6.4lf\n",ea);
+        printf ("\n\nLa Raiz es %6.4lf en %d iteraciones\n",x1,*iter);
+        printf ("\n\nEl error relativo aproximado es %6.4lf\n",*ea);
         return;
     }
     else
@@ -98,8 +98,8 @@ double secante(double x0, double x1, double es, double *ea, int imax, int *iter,
     }while(es > *ea && *iter <= imax);
 
     if ( tabla == 1 ) {
-        printf ("\n\nLa Raiz es %6.4lf en %d iteraciones\n",x2);
-        printf ("\n\nEl error relativo aproximado es %6.4lf\n",ea);
+        printf ("\n\nLa Raiz es %6.4lf en %d iteraciones\n",x2,*iter);
+        printf ("\n\nEl error relativo aproximado es %6.4lf\n",*ea);
         return;
     }
     else
