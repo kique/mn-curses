@@ -13,6 +13,7 @@
  void grafica( void );
  double f(double);
  double df(double);
+ double gf(double);
 
 
 #endif // PROTOTIPOS_H_INCLUDED

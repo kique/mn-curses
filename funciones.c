@@ -1,16 +1,16 @@
 #include "header.h"
 
-double f(double z)
+double f(double x)
 {
-    return tan(0.2*z)+0.5;
+    return 3*x*x-30;
 }
 
-double df(double z)
+double df(double x)
 {
-    return 2.85*z*z-11.8*z+10.9;
+    return 6*x;
 }
 
-double gf(double z)
+double gf(double x)
 {
-    return z + tan(0.2*z)+0.5;
+    return 3*x*x+x-30;
 }

@@ -33,8 +33,8 @@
 entrada_cerrados (int op_met)
 {
   
-  int imax,salida,iter,tabla;
-  double xa,xb,ea,es;
+  int imax,iter=0,tabla;
+  double xa,xb,ea=100,es,raiz;
   char id_metodo[20];
   
   system("clear");
@@ -58,8 +58,10 @@ entrada_cerrados (int op_met)
       if(tabla == 1)
           biseccion(xa, xb, es, &ea, imax, &iter, tabla);
       else if(tabla == 0)
-          printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",
-          biseccion(xa, xb, es, &ea, imax, &iter, 0),ea,iter);
+      {
+	  raiz =  biseccion(xa, xb, es, &ea, imax, &iter, 0);
+          printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",raiz,ea,iter);
+      }
       else
           printf("\nOpcion invalida, vuelva a intentar");
   }
@@ -68,8 +70,10 @@ entrada_cerrados (int op_met)
        if(tabla == 1)
           rfalsa(xa, xb, es, &ea, imax, &iter, tabla);
       else if(tabla == 0)
-          printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",
-          rfalsa(xa, xb, es, &ea, imax, &iter, 0),ea,iter);
+      {
+	  raiz =  rfalsa(xa, xb, es, &ea, imax, &iter, 0);
+          printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",raiz,ea,iter);
+      }
       else
           printf("\nOpcion invalida, vuelva a intentar");
   }
@@ -89,9 +93,8 @@ entrada_cerrados (int op_met)
 entrada_abiertos(int op_met)
 {
   
-  int imax,salida,iter,tabla;
-  double x0,x1,xr,ea,es;
-  char id_metodo[20];
+  int imax,iter=0,tabla;
+  double x0,x1,ea=100,es,raiz;
   
   system("clear");
 
@@ -122,8 +125,10 @@ entrada_abiertos(int op_met)
               if(tabla == 1)
                   pfijo(x0, es, &ea, imax, &iter, tabla);
               else if(tabla == 0)
-                  printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",
-                  pfijo(x0, es, &ea, imax, &iter, tabla),ea,iter);
+	      {
+		  raiz = pfijo(x0, es, &ea, imax, &iter, tabla);
+		  printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",raiz,ea,iter);
+	      }
               else
                   printf("\nOpcion invalida, vuelva a intentar");
           }
@@ -141,13 +146,15 @@ entrada_abiertos(int op_met)
           printf ("\nDesea imprimir tabla de resultados o solamente la raiz? (1=tabla / 0=raiz ): ");
           scanf("%d",&tabla);
 
-          if(op_met == 0)
+          if(op_met == 1)
           {
               if(tabla == 1)
                   newtonrap(x0, es, &ea, imax, &iter, tabla);
               else if(tabla == 0)
-                  printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",
-                  newtonrap(x0, es, &ea, imax, &iter, tabla),ea,iter);
+	      {
+		  raiz=newtonrap(x0, es, &ea, imax, &iter, tabla);
+                  printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",raiz,ea,iter);
+	      }
               else
                   printf("\nOpcion invalida, vuelva a intentar");
           }
@@ -167,13 +174,15 @@ entrada_abiertos(int op_met)
           printf ("\nDesea imprimir tabla de resultados o solamente la raiz? (1=tabla / 0=raiz ): ");
           scanf("%d",&tabla);
 
-          if(op_met == 0)
+          if(op_met == 2)
           {
               if(tabla == 1)
 		  secante(x0, x1, es, &ea, imax, &iter, tabla);
               else if(tabla == 0)
-                  printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",
-		          secante(x0, x1, es, &ea, imax, &iter, tabla),ea,iter);
+	      {
+		  raiz = secante(x0, x1, es, &ea, imax, &iter, tabla);
+                  printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",raiz ,ea,iter);
+	      }
               else
                   printf("\nOpcion invalida, vuelva a intentar");
           }

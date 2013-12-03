@@ -3,7 +3,7 @@
 
 int main()
 {
-    char opc,rep,trash;
+    char opc,rep;
 
     do{
 	system("clear");

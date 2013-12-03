@@ -63,7 +63,7 @@ double biseccion(double xa, double xb, double es, double *ea, int imax, int *ite
   
   if ( tabla == 1 ) {
       printf ("\n\nLa Raiz es %6.4lf\n",xr);
-      return;
+      return 0;
   }
   else
       return xr;
@@ -72,8 +72,7 @@ double biseccion(double xa, double xb, double es, double *ea, int imax, int *ite
 
 double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla)
 {
-  double xr, xrold;
-  int cont, maxit;
+  double xr=xa, xrold;
   
   if ( tabla == 1 )
   {
@@ -118,10 +117,11 @@ double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, 
 	}
     if ( tabla == 1 ) {
         printf ("\n\nLa Raiz es %6.4lf\n",xr);
-        return;
+        return 0;
     }
     else
        return xr;
   }
+  return 0;
 }
 

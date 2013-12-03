@@ -17,7 +17,7 @@ double pfijo(double x0, double es, double *ea, int imax, int *iter, int tabla)
     do{
         xrold = xr;
         xr = gf(xrold);
-        *iter++;
+        *iter=*iter+1;
         if(xr!=0)
         {
             *ea=fabs((xr-xrold)/xr)*100;
@@ -26,12 +26,12 @@ double pfijo(double x0, double es, double *ea, int imax, int *iter, int tabla)
             printf ("| %2d | %12.8f | %12.8f | %12.8f |\n", *iter, xr, *ea, f(xr) );
 	    }
 
-    }while(es > *ea && *iter <= imax);
+    }while(es < *ea && *iter <= imax);
 
     if ( tabla == 1 ) {
         printf ("\n\nLa Raiz es %6.4lf en %d iteraciones\n",xr,*iter);
         printf ("\n\nEl error relativo aproximado es %6.4lf\n",*ea);
-        return;
+        return 0;
     }
     else
         return xr;
@@ -39,7 +39,7 @@ double pfijo(double x0, double es, double *ea, int imax, int *iter, int tabla)
 
 double newtonrap(double x0, double es, double *ea, int imax, int *iter, int tabla)
 {
-    double x1;
+    double x1=x0;
 
     if(tabla == 1)
     {
@@ -52,7 +52,7 @@ double newtonrap(double x0, double es, double *ea, int imax, int *iter, int tabl
     do{
         x0 = x1;
         x1 = x0-(f(x0)/df(x0));
-        *iter++;
+        *iter=*iter+1;
         if(x1!=0)
         {
             *ea=fabs((x1-x0)/x1)*100;
@@ -60,11 +60,11 @@ double newtonrap(double x0, double es, double *ea, int imax, int *iter, int tabl
         if ( tabla == 1 ) {
             printf ("| %2d | %12.8f | %12.8f | %12.8f |\n", *iter, x1, *ea, f(x1) );
 	    }
-    }while(es > *ea && *iter <= imax);
+    }while(es < *ea && *iter <= imax);
     if ( tabla == 1 ) {
         printf ("\n\nLa Raiz es %6.4lf en %d iteraciones\n",x1,*iter);
         printf ("\n\nEl error relativo aproximado es %6.4lf\n",*ea);
-        return;
+        return 0;
     }
     else
         return x1;
@@ -72,7 +72,7 @@ double newtonrap(double x0, double es, double *ea, int imax, int *iter, int tabl
 
 double secante(double x0, double x1, double es, double *ea, int imax, int *iter, int tabla)
 {
-    double x2;
+    double x2=x0;
 
     if(tabla == 1)
     {
@@ -86,7 +86,7 @@ double secante(double x0, double x1, double es, double *ea, int imax, int *iter,
         x0 = x1;
         x1 = x2;
         x2 = x1 - (f(x1)*(x0-x1))/(f(x0)-f(x1));
-        *iter++;
+        *iter=*iter+1;
         if(x1!=0)
         {
             *ea=fabs((x1-x0)/x1)*100;
@@ -95,12 +95,12 @@ double secante(double x0, double x1, double es, double *ea, int imax, int *iter,
             printf ("| %2d | %12.8f | %12.8f | %12.8f |\n", *iter, x2, *ea, f(x2) );
 	    }
 
-    }while(es > *ea && *iter <= imax);
+    }while(es < *ea && *iter <= imax);
 
     if ( tabla == 1 ) {
         printf ("\n\nLa Raiz es %6.4lf en %d iteraciones\n",x2,*iter);
         printf ("\n\nEl error relativo aproximado es %6.4lf\n",*ea);
-        return;
+        return 0;
     }
     else
         return x2;

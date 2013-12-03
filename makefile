@@ -3,12 +3,10 @@
 #
 
 CC = gcc # Compiler to use
-OPTIONS = -O2 -g -lm -lncurses -lplplotd # -g for debug, -O2 for optimise and -Wall additional messages
+OPTIONS = -O2 -g -Wall -lm -lncurses -lplplotd # -g for debug, -O2 for optimise and -Wall additional messages
 INCLUDES = -I/usr/include/plplot # Directory for header file
 FUENTES=\
 		main.c \
-	   	int_newton.c \
-		main_intnewton.c \
 		funciones.c \
 		menu.c \
 		raices-cerrados.c \
