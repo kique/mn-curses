@@ -2,6 +2,7 @@
 
 *.o
 *.swp
+*.gch
 metodos_bin
 makefileOLD
 
