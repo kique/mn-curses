@@ -19,10 +19,10 @@ OBJS = ${FUENTES:.c=.o} # List of objects to be build
  
 all: ${OBJS} 
 	@echo "Building.." # To print "Building.." message
-	${CC} ${OPTIONS} ${INCLUDES} ${OBJS} -o metodos_bin
+	${CC} ${INCLUDES} ${OBJS} -o metodos_bin ${OPTIONS} 
 
 %.o: %.c  # % pattern wildcard matching
-	${CC} ${OPTIONS}  -c $*.c ${INCLUDES}
+	${CC}  -c $*.c ${INCLUDES} ${OPTIONS} 
 list:
 	@echo $(shell ls) # To print output of command 'ls'
      
