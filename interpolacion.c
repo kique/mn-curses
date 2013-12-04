@@ -72,7 +72,6 @@ void entrada_difdivnewton()
 
 	endwin();
 
-	return 0;
 }
 
 #include <stdlib.h>
@@ -117,11 +116,4 @@ void NewtonInt(double *pX, double *pY, int n, double xi, double *ptrYint, double
 		free(fdd[i]);
 	}
 	free(fdd);
-}
-}
-}
-}
-}
-}
-}
 }

@@ -30,7 +30,7 @@ int main()
             case '5':
                 entrada_abiertos(2);
                 break;
-            case '7':
+            case '6':
 		entrada_difdivnewton();
 		break;
             case '10':
@@ -41,14 +41,8 @@ int main()
                 printf("\nOpcion Invalida\n");
         }
         printf("\n\nDeseas realizar otro calculo?: (s/n)");
-	//fpurge(stdin);
         scanf(" %c",&rep);
 	getchar();
-//        scanf("%c",&rep);
-        //scanf("%c %c",&rep);
-        //scanf("%c",&trash);
-        //scanf("%[^\n]%*c",&rep);
-        //getchar();
     }while(rep=='s');
 
     return 0;
