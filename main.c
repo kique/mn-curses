@@ -30,10 +30,14 @@ int main()
             case '5':
                 entrada_abiertos(2);
                 break;
-            case '6':
+            case '7':
+		entrada_difdivnewton();
+		break;
+            case '10':
                 printf("\nAdios!");
                 break;
-            default:
+ 
+	    default:
                 printf("\nOpcion Invalida\n");
         }
         printf("\n\nDeseas realizar otro calculo?: (s/n)");

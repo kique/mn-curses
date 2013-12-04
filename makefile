@@ -12,7 +12,8 @@ FUENTES=\
 		raices-cerrados.c \
 		entrada_raices.c \
 		raices-abiertos.c \
-		grafica.c
+		grafica.c\
+		interpolacion.c	
 #FUENTES=%.c
 OBJS = ${FUENTES:.c=.o} # List of objects to be build
 .PHONY: all clean # To declare all, clean are not files

@@ -4,5 +4,6 @@
  #include <stdio.h>
  #include <stdlib.h>
  #include <math.h>
+ #include <ncurses.h>
 
 #endif // HEADER_H_INCLUDED

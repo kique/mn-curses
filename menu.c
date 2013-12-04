@@ -17,6 +17,9 @@ void menu(void)
     printf("\n4.- Metodo de Newton-Raphson");
     printf("\n5.- Metodo de la Secante");
 
-    printf("\n\n6.- Salir\n\n");
+    printf("\n\n---- Metodos de Interpolacion");
+    printf("\n6.-Metodo de Diferencias Divididas de Newton");
+ 
+    printf("\n\n10.- Salir\n\n");
 }
 
