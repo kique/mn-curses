@@ -31,8 +31,8 @@ int main()
                 entrada_abiertos(2);
                 break;
             case '6':
-		entrada_difdivnewton();
-		break;
+        		entrada_difdivnewton();
+		        break;
             case '10':
                 printf("\nAdios!");
                 break;
