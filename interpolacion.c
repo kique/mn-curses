@@ -21,7 +21,7 @@
 
 void NewtonInt(double *pX, double *pY, int n, double xi, double *ptrYint, double *ptrEa );
 
-void entrada_difdivnewton()
+void entrada_difdivnewton(void)
 {
 	double *px, *py, xi, *yint, *ea;
 	int n,i;

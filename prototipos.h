@@ -14,6 +14,7 @@
  double f(double);
  double df(double);
  double gf(double);
+void entrada_difdivnewton(void);
 
 
 #endif // PROTOTIPOS_H_INCLUDED
