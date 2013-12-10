@@ -5,5 +5,7 @@
  #include <stdlib.h>
  #include <math.h>
  #include <ncurses.h>
+ #include <matheval.h>
+ #include <assert.h>
 
 #endif // HEADER_H_INCLUDED

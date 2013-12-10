@@ -20,7 +20,7 @@
 #include "prototipos.h"
 
 
-double biseccion(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla)
+double biseccion(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla, void *f)
 {
   double  xr,xrold,test;
 
@@ -45,8 +45,8 @@ double biseccion(double xa, double xb, double es, double *ea, int imax, int *ite
           *ea = fabs((xr-xrold)/xr)*100;
       }    
       
-      test = f(xa)*f(xr);
-      
+      //test = f(xa)*f(xr);
+      test = evaluator_evaluate_x (f,xa) * evaluator_evaluate_x(f,xr);  
       if (test < 0)
           xb = xr;
       else if(test > 0)
@@ -56,11 +56,13 @@ double biseccion(double xa, double xb, double es, double *ea, int imax, int *ite
 
       //Se imprimen los datos de la tabla si el usuario lo desea, tabla == 1
       if ( tabla == 1 ) {
-           printf ("| %2d | %12.8lf | %12.8lf | %12.8lf | %12.8lf | %12.8lf\n", *iter, xa, xr, xb, *ea, f(xr) );
+           printf ("| %2d | %12.8lf | %12.8lf | %12.8lf | %12.8lf | %12.8lf\n", *iter, xa, xr, xb, *ea, evaluator_evaluate_x(f,xr) );
 	    }
   }while((*ea > es ) && (*iter <= imax));
 
-  
+  /*  Destroy evaluators.  */
+  evaluator_destroy (f);
+
   if ( tabla == 1 ) {
       printf ("\n\nLa Raiz es %6.4lf\n",xr);
       return 0;

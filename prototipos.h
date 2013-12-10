@@ -5,7 +5,7 @@
  void entrada_cerrados (int op_met);
  void entrada_abiertos (int op_met);
  void entrada_cerrados (int);
- double biseccion(double, double, double, double *, int, int *, int );
+ double biseccion(double, double, double, double *, int, int *, int ,void *f);
  double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla);
  double newtonrap(double x0, double es, double *ea, int imax, int *iter, int tabla);
  double pfijo(double x0, double es, double *ea, int imax, int *iter, int tabla);
