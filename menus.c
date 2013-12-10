@@ -14,18 +14,15 @@ void menu(void)
     printf("\n\nSeleccione una Opcion");
 
     printf("\nA.- Graficar una Funcion");
-
-    printf("\nLocalizacion de Raices");
-    printf("\n\nB.- Metodo de la Biseccion");
-    printf("\nC.- Metodo de la Regla Falsa");
-
-    printf("\n\n---- Metodos de Abiertos");
-    printf("\nD.- Metodo del Punto Fijo");
-    printf("\nE.- Metodo de Newton-Raphson");
-    printf("\nF.- Metodo de la Secante");
-
-    printf("\n\n---- Metodos de Interpolacion");
-    printf("\nG.-Metodo de Diferencias Divididas de Newton");
+    printf("\nB.-Localizacion de Raices");
+    printf("\nC.-Solucion de SEL");
+    printf("\nD.-Ajuste de Funciones");
+    printf("\nE.-Interpolacion");
+    printf("\nF.-Diferenciacion");
+    printf("\nG.-Integracion");
+    printf("\nH.-Solucion de EDO");
+    printf("\n");
+    printf("\n");
  
     printf("\n\nZ.- Salir\n\n");
 }
@@ -40,23 +37,19 @@ void menu(void)
     void
 menu_raices ( void )
 {
-    printf("Programas para localizacion de Raices");
+    printf("Metodos para localizacion de Raices");
     printf("\n\nSeleccione una Opcion");
 
-    printf("\nA.- Graficar la Funcion");
+    printf("\n\n---- Metodos de Intervalo");
 
-    printf("\n---- Metodos de Intevalo:");
-    printf("\n\nB.- Metodo de la Biseccion");
-    printf("\nC.- Metodo de la Regla Falsa");
+    printf("\nA.-Metodo de Biseccion");
+    printf("\nB.-Metodo de Regla Falsa");
 
     printf("\n\n---- Metodos de Abiertos");
-    printf("\nD.- Metodo del Punto Fijo");
-    printf("\nE.- Metodo de Newton-Raphson");
+    printf("\nC.- Metodo del Punto Fijo");
+    printf("\nD.- Metodo de Newton-Raphson");
     printf("\nF.- Metodo de la Secante");
 
-    printf("\n\n---- Metodos de Interpolacion");
-    printf("\nG.-Metodo de Diferencias Divididas de Newton");
- 
     printf("\n\nZ.- Salir\n\n");
 }
 

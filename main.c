@@ -1,3 +1,21 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:  main.c
+ *
+ *    Description:  Programa principal de Metodos Numericos
+ *
+ *        Version:  0.01
+ *        Created:  09/12/13 23:40:57
+ *       Revision:  none
+ *       Compiler:  gcc
+ *
+ *         Author:  Enrique Martinez Roldan (emr), enrique.roldan@gmail.com
+ *   Organization:  IPN ESIME Zacatenco
+ *
+ * =====================================================================================
+ */
+
 #include "header.h"
 #include "prototipos.h"
 
