@@ -48,9 +48,8 @@ menu_raices ( void )
     printf("\n\n---- Metodos de Abiertos");
     printf("\nC.- Metodo del Punto Fijo");
     printf("\nD.- Metodo de Newton-Raphson");
-    printf("\nF.- Metodo de la Secante");
-
+    printf("\nE.- Metodo de la Secante");
+ 
     printf("\n\nZ.- Salir\n\n");
-}
 
 }		/* -----  end of function menu_raices  ----- */

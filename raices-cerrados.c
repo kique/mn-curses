@@ -20,9 +20,15 @@
 #include "prototipos.h"
 
 
-double biseccion(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla, void *f)
+double biseccion(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla, char *buffer)
 {
   double  xr,xrold,test;
+  void *f;
+
+  /*  Create evaluator for function.  */
+    f = evaluator_create (buffer);
+    assert (f);
+
 
   //Se imprime la cabecera de la tabla solo si lo desea el usuario tabla == 1
   if(tabla == 1)

@@ -36,11 +36,8 @@ entrada_cerrados (int op_met)
 
     char buffer[BUFFER_SIZE];	/*  Input buffer.  */
     int length;			/*  Length of above buffer. */
-    void *f, *f_prim;		/*  Evaluators for function and function derivative.  */
-    char **names;		/*  Function variables names. */
-    int count;			/*  Number of function variables. */
-    double x;			/*  Variable x value.  */
-    int i;			/*  Loop counter. */
+    void *f;/*  Evaluators for function and function derivative.  */
+    double x;
 
 
     int imax,iter=0,tabla;
@@ -58,10 +55,6 @@ entrada_cerrados (int op_met)
     if (length > 0 && buffer[length - 1] == '\n')
 	buffer[length - 1] = '\0';
 
-    /*  Create evaluator for function.  */
-    f = evaluator_create (buffer);
-    assert (f);
-
 
     printf ("\nDe el valor del limite izquierdo xa: ");
     scanf("%lf",&xa);
@@ -78,10 +71,10 @@ entrada_cerrados (int op_met)
     if(op_met == 0)
     {
 	if(tabla == 1)
-	    biseccion(xa, xb, es, &ea, imax, &iter, tabla, f);
+	    biseccion(xa, xb, es, &ea, imax, &iter, tabla, buffer);
 	else if(tabla == 0)
 	{
-	    raiz =  biseccion(xa, xb, es, &ea, imax, &iter, 0, f);
+	    raiz =  biseccion(xa, xb, es, &ea, imax, &iter, 0, buffer);
 	    printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",raiz,ea,iter);
 	}
 	else

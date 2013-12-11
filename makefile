@@ -3,18 +3,20 @@
 #
 
 CC = gcc # Compiler to use
-OPTIONS = -O2 -g -Wall -lm -lncurses -lplplotd # -g for debug, -O2 for optimise and -Wall additional messages
-INCLUDES = -I/usr/include/plplot # Directory for header file
+OPTIONS = -O2 -g -Wall -lm -lncurses -lplplotd -lmatheval # -g for debug, -O2 for optimise and -Wall additional messages
+INCLUDES = -I/usr/include/plplot -I/usr/local/include -L/usr/local/lib # Directory for header file
 FUENTES=\
 		main.c \
 		funciones.c \
-		menu.c \
+		menus.c \
 		raices-cerrados.c \
 		entrada_raices.c \
 		raices-abiertos.c \
 		grafica.c\
 		interpolacion.c\
-		io_matriz.c
+		func_menus.c\
+
+
 #FUENTES=%.c
 OBJS = ${FUENTES:.c=.o} # List of objects to be build
 .PHONY: all clean # To declare all, clean are not files

@@ -28,30 +28,29 @@ int main()
         menu();
 	scanf("%c",&opc);
 
-        switch(opc)
+        switch(toupper(opc))
         {
-            case '0':
+            case 'A':
                 grafica();
                 break;
-            case '1':
-                entrada_cerrados(1);
+            case 'B':
+                menu_raices();
+		ctrl_menu_raices();
+		break;
+            case 'C':
                 break;
-            case '2':
-                entrada_cerrados(2);
+            case 'D':
                 break;
-            case '3':
-                entrada_abiertos(0);
-                break;
-            case '4':
-                entrada_abiertos(1);
-                break;
-            case '5':
-                entrada_abiertos(2);
-                break;
-            case '6':
+            case 'E':
        		entrada_difdivnewton();
+                break;
+            case 'F':
+                break;
+            case 'G':
 	        break;
-            case '10':
+	    case 'H':
+		break;
+            case 'Z':
                 printf("\nAdios!");
                 break;
  
@@ -60,7 +59,7 @@ int main()
         }
         printf("\n\nDeseas realizar otro calculo?: (s/n)");
         scanf(" %c",&rep);
-	getchar();
+	//getchar();
 	
     }while(rep=='s');
 
