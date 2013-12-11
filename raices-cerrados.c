@@ -20,14 +20,30 @@
 #include "prototipos.h"
 
 
-double biseccion(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla, char *buffer)
+double biseccion(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla, /*char buffer[]*/)
 {
   double  xr,xrold,test;
   void *f;
 
+  
+  char buffer[BUFFER_SIZE];	/*  Input buffer.  */
+    int length;			/*  Length of above buffer. */
+    void *f, *f_prim;		/*  Evaluators for function and function derivative.  */
+    char **names;		/*  Function variables names. */
+    int count;			/*  Number of function variables. */
+ 
+    printf ("f(x) = ");
+    fgets (buffer, BUFFER_SIZE, stdin);
+    length = strlen (buffer);
+    if (length > 0 && buffer[length - 1] == '\n')
+	buffer[length - 1] = '\0';
+
+ 
+
   /*  Create evaluator for function.  */
     f = evaluator_create (buffer);
     assert (f);
+
 
 
   //Se imprime la cabecera de la tabla solo si lo desea el usuario tabla == 1

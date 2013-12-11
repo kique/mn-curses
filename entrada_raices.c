@@ -34,10 +34,10 @@
 entrada_cerrados (int op_met)
 {
 
-    char buffer[BUFFER_SIZE];	/*  Input buffer.  */
-    int length;			/*  Length of above buffer. */
-    void *f;/*  Evaluators for function and function derivative.  */
-    double x;
+//    char buffer[BUFFER_SIZE];	/*  Input buffer.  */
+//    int length;			/*  Length of above buffer. */
+//    void *f;/*  Evaluators for function and function derivative.  */
+//    double x;
 
 
     int imax,iter=0,tabla;
@@ -46,15 +46,15 @@ entrada_cerrados (int op_met)
 
     system("clear");
 
-    printf("Programa para calcular una raiz por el Metodo de %s\n", (op_met == 1)? strcpy(id_metodo,"Biseccion"):strcpy(id_metodo,"Falsa Posicion"));
+  /*  printf("Programa para calcular una raiz por el Metodo de %s\n", (op_met == 1)? strcpy(id_metodo,"Biseccion"):strcpy(id_metodo,"Falsa Posicion"));
     printf("\nIntroduzca al funcion que desa utilizar: ");
     /* Se lee la expresion matematica */
-    printf ("f(x) = ");
-    fgets (buffer, BUFFER_SIZE, stdin);
-    length = strlen (buffer);
+   // printf ("f(x) = ");
+   // fgets (buffer, BUFFER_SIZE, stdin);
+   /*  length = strlen (buffer);
     if (length > 0 && buffer[length - 1] == '\n')
 	buffer[length - 1] = '\0';
-
+*/
 
     printf ("\nDe el valor del limite izquierdo xa: ");
     scanf("%lf",&xa);
@@ -71,10 +71,10 @@ entrada_cerrados (int op_met)
     if(op_met == 0)
     {
 	if(tabla == 1)
-	    biseccion(xa, xb, es, &ea, imax, &iter, tabla, buffer);
+	    biseccion(xa, xb, es, &ea, imax, &iter, 1/* ,  buffer*/);
 	else if(tabla == 0)
 	{
-	    raiz =  biseccion(xa, xb, es, &ea, imax, &iter, 0, buffer);
+	    raiz =  biseccion(xa, xb, es, &ea, imax, &iter, 0/* , buffer*/);
 	    printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",raiz,ea,iter);
 	}
 	else
