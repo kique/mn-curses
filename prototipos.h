@@ -16,7 +16,13 @@
  double f(double);
  double df(double);
  double gf(double);
-void entrada_difdivnewton(void);
+
+ void eliminacion(double **a, double *x, int filas, int columnas, double *b);
+ double crear_matriz (int filas, int columnas );
+
+
+
+ void entrada_difdivnewton(void);
 
 
 #endif // PROTOTIPOS_H_INCLUDED

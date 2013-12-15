@@ -29,12 +29,27 @@ crear_matriz (int filas, int columnas )
     double **m;
     int j;
 
-    m = (double **⁾ malloc(filas * sizeof(float *));
+    m = (double **) malloc(filas * sizeof(double *));
     for(j=0;j< filas; j++)
         m[j]=(double)malloc(columnas * sizeof(double));
 
     return m;
 }		/* -----  end of function crear_matriz  ----- */
+
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  crea_vector
+ *  Description:  Funcion que crea un vector dinamico
+ * =====================================================================================
+ */
+double
+crea_vector (int tam )
+{
+    double *v;
+    v = (double *) malloc(tam * sizeof(double *));	
+    return v;
+}		/* -----  end of function crea_vector  ----- */
 
 /* 
  * ===  FUNCTION  ======================================================================
