@@ -15,6 +15,9 @@ FUENTES=\
 		grafica.c\
 		interpolacion.c\
 		func_menus.c\
+		io_matriz.c\
+		gauss.c\
+		op_matrices.c\
 
 
 #FUENTES=%.c

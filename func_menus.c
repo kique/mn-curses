@@ -69,3 +69,51 @@ ctrl_menu_raices ( void )
     }while(resp=='s');
 
 }		/* -----  end of function menu_raices  ----- */
+
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  ctrl_menu_sel
+ *  Description:  Control del menu de SEL
+ * =====================================================================================
+ */
+    void
+ctrl_menu_sel ( void )
+{
+    char opc,resp;
+    
+    do{
+    system("clear");
+
+    menu_sel();
+    scanf(" %c",&opc);
+
+        switch(toupper(opc))
+	{
+	    case 'A':
+		//Metodo de Gauss Simple
+                gauss_simple();
+                break;
+            case 'B':
+		//Entrada metodo de Regla Falsa
+                break;
+            case 'C':
+		//Entrada Metodo Punto Fijo
+                break;
+            case 'D':
+		//Entrada Metodo Newton - Raphson
+                break;
+            case 'E':
+		//Entrada Metodo Secante
+                break;
+	    case 'Z':
+		break;
+
+	    default:
+                printf("\nOpcion Invalida\n");
+        }
+        printf("\n\nDeseas realizar otro calculo?: (s/n)");
+        scanf(" %c",&resp);
+    }while(resp=='s');
+
+}		/* -----  end of function menu_sel  ----- */

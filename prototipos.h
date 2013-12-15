@@ -17,10 +17,19 @@
  double df(double);
  double gf(double);
 
+ void gauss_simple ( void );
  void eliminacion(double **a, double *x, int filas, int columnas, double *b);
- double crear_matriz (int filas, int columnas );
-
-
+ void sustitucion(double **a, double *x, int filas, int columnas, double *b);
+ double ** crear_matriz (int filas, int columnas );
+ double * crear_vector (int tam );
+ void destruye_matriz(double **m, int filas, int columnas);
+ void lee_matriz ( double **m, int filas, int columnas );
+ void lee_vector ( double *v, int tam );
+ void imprime_matriz ( double **m, int filas, int columnas );
+ void imprime_vector ( double *, int);
+ void destruye_vector ( double *v );
+ void ctrl_menu_sel ( void );
+ void imprime_matriz_aumentada ( double **a, double *b, int tam );
 
  void entrada_difdivnewton(void);
 

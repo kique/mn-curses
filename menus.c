@@ -53,3 +53,31 @@ menu_raices ( void )
     printf("\n\nZ.- Salir\n\n");
 
 }		/* -----  end of function menu_raices  ----- */
+
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  menu_sel
+ *  Description:  Menu para los metodos de Solucion de Sistemas de Ecs Lineales
+ * =====================================================================================
+ */
+    void
+menu_sel ( void )
+{
+    printf("Solución de Sistemas de Ecuaciones Lineales");
+    printf("\n\nSeleccione una Opcion");
+
+    printf("\n\n---- Métodos de Eliminacion");
+
+    printf("\nA.-Metodo de Gauss Simple");
+    printf("\nB.-Metodo de Gauss Modificado");
+
+    printf("\n\n---- Metodos de Iterativos");
+    printf("\nC.- Metodo de Gauss Seidel");
+    printf("\nD.- ");
+    printf("\nE.- ");
+ 
+    printf("\n\nZ.- Salir\n\n");
+
+   return ;
+}		/* -----  end of function menu_sel  ----- */

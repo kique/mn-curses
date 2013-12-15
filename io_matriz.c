@@ -15,7 +15,8 @@
  *
  * =====================================================================================
  */
-
+#include "header.h"
+#include "prototipos.h"
 
 /* 
  * ===  FUNCTION  ======================================================================
@@ -23,7 +24,7 @@
  *  Description:  crea matrices de tamanio variable
  * =====================================================================================
  */
-    double
+    double **
 crear_matriz (int filas, int columnas )
 {
     double **m;
@@ -31,7 +32,7 @@ crear_matriz (int filas, int columnas )
 
     m = (double **) malloc(filas * sizeof(double *));
     for(j=0;j< filas; j++)
-        m[j]=(double)malloc(columnas * sizeof(double));
+        m[j]=(double *)malloc(columnas * sizeof(double));
 
     return m;
 }		/* -----  end of function crear_matriz  ----- */
@@ -39,17 +40,47 @@ crear_matriz (int filas, int columnas )
 
 /* 
  * ===  FUNCTION  ======================================================================
- *         Name:  crea_vector
+ *         Name:  crear_vector
  *  Description:  Funcion que crea un vector dinamico
  * =====================================================================================
  */
-double
-crea_vector (int tam )
+double *
+crear_vector (int tam )
 {
     double *v;
     v = (double *) malloc(tam * sizeof(double *));	
     return v;
 }		/* -----  end of function crea_vector  ----- */
+
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  lee_vector
+ *  Description:  Lee vectores de tamanio dinamico
+ * =====================================================================================
+ */
+    void
+lee_vector ( double *v, int tam )
+{
+    int i;
+    for (i = 0; i < tam; i++) {
+        printf("Dar el elemento [%d+1] = ",i);
+        scanf("%lf",&v[i]);
+    }
+
+}		/* -----  end of function lee_vector  ----- */
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  destruye_vector
+ *  Description:  Elimina vectores dinamicos
+ * =====================================================================================
+ */
+    void
+destruye_vector ( double *v )
+{
+    free(v);
+}		/* -----  end of function destuye_vector  ----- */
+
 
 /* 
  * ===  FUNCTION  ======================================================================
@@ -85,8 +116,8 @@ lee_matriz ( double **m, int filas, int columnas )
     for ( i=0; i < filas; i++ ) {
 
         for ( j=0; j < columnas; j++ ) {
-            printf("Dar el elemento [%d,%d]: ",i,j);
-            scanf("%f", &dato);
+            printf("\nDar el elemento [%d,%d]: ",i,j);
+            scanf("%lf", &dato);
             m[i][j]=dato;
         }
         printf("\n");
@@ -115,4 +146,40 @@ imprime_matriz ( double **m, int filas, int columnas )
 }		/* -----  end of function imprime_matriz  ----- */
 
 
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  imprime_matriz_aumentada
+ *  Description:  Funcion para imprimir la matriz aumentada
+ * =====================================================================================
+ */
+    void
+imprime_matriz_aumentada ( double **a, double *b, int tam )
+{
+    int i,j;
+    
+    for ( i=0; i < tam; i++ ) {
+
+        for ( j=0; j < tam; j++ ) {
+            printf("[ %e ] \t: ",a[i][j]);
+        }
+        printf(" = [ %e ]",b[i]);
+        printf("\n");
+    }
+}		/* -----  end of function imprime_matriz_aumentada  ----- */
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  imprime_vector
+ *  Description:  Imprime un vector dinámico
+ * =====================================================================================
+ */
+    void
+imprime_vector ( double *v, int tam )
+{
+    int i;
+
+    for (i = 0; i < tam; i++) {
+        printf("[ %e ] \n",v[i]);
+    }
+}		/* -----  end of function imprime_vector  ----- */
 

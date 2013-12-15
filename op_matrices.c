@@ -15,7 +15,8 @@
  *
  * =====================================================================================
  */
-
+#include "header.h"
+#include "prototipos.h"
 
 /* 
  * ===  FUNCTION  ======================================================================
@@ -26,8 +27,11 @@
 
 void eliminacion(double **a, double *x, int filas, int columnas, double *b)
 {
-    int i,j,k;
+    int i,j,k,n;
     float factor;
+    
+    n=filas;
+
     for(k=0;k<=n-2;k++)
     {
 	for(i = k+1;i <= n-1;i++)
@@ -52,8 +56,10 @@ void eliminacion(double **a, double *x, int filas, int columnas, double *b)
 
 void sustitucion(double **a, double *x, int filas, int columnas, double *b)
 {
-    int i,j;
+    int i,j,n;
     float sum;
+
+    n=filas;
 
     x[n-1]=b[n-1]/a[n-1][n-1];
 
