@@ -44,7 +44,7 @@ int main()
             case 'D':
                 break;
             case 'E':
-       		entrada_difdivnewton();
+           		entrada_difdivnewton();
                 break;
             case 'F':
                 break;

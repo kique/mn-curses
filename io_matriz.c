@@ -64,7 +64,7 @@ lee_vector ( double *v, int tam )
 {
     int i;
     for (i = 0; i < tam; i++) {
-        printf("Dar el elemento [%d+1] = ",i);
+        printf("\nDar el elemento [%d] = ",i+1);
         scanf("%lf",&v[i]);
     }
 
@@ -84,7 +84,7 @@ destruye_vector ( double *v )
 
 /* 
  * ===  FUNCTION  ======================================================================
- *         Name:  destruye__matriz
+ *         Name:  destruye_matriz
  *  Description:  Destruye matrices de tamanio variable
  * =====================================================================================
  */
@@ -116,7 +116,7 @@ lee_matriz ( double **m, int filas, int columnas )
     for ( i=0; i < filas; i++ ) {
 
         for ( j=0; j < columnas; j++ ) {
-            printf("\nDar el elemento [%d,%d]: ",i,j);
+            printf("Dar el elemento [%d,%d]: ",i+1,j+1);
             scanf("%lf", &dato);
             m[i][j]=dato;
         }
@@ -139,7 +139,7 @@ imprime_matriz ( double **m, int filas, int columnas )
     for ( i=0; i < filas; i++ ) {
 
         for ( j=0; j < columnas; j++ ) {
-            printf("[ %e ] \t: ",m[i][j]);
+            printf("[ %11.6lf ] ",m[i][j]);
         }
         printf("\n");
     }
@@ -160,9 +160,9 @@ imprime_matriz_aumentada ( double **a, double *b, int tam )
     for ( i=0; i < tam; i++ ) {
 
         for ( j=0; j < tam; j++ ) {
-            printf("[ %e ] \t: ",a[i][j]);
+            printf("[ %11.6lf ] ",a[i][j]);
         }
-        printf(" = [ %e ]",b[i]);
+        printf(" = [ %11.6lf ]",b[i]);
         printf("\n");
     }
 }		/* -----  end of function imprime_matriz_aumentada  ----- */
@@ -179,7 +179,7 @@ imprime_vector ( double *v, int tam )
     int i;
 
     for (i = 0; i < tam; i++) {
-        printf("[ %e ] \n",v[i]);
+        printf("x[%d] = [ %11.6lf ] \n",i+1,v[i]);
     }
 }		/* -----  end of function imprime_vector  ----- */
 

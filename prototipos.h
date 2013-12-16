@@ -31,6 +31,10 @@
  void ctrl_menu_sel ( void );
  void imprime_matriz_aumentada ( double **a, double *b, int tam );
 
+ 
+ void sustitucion_didactica(double **a, double *x, int filas, int columnas, double *b);
+ void eliminacion_didactica(double **a, double *x, int filas, int columnas, double *b);
+
  void entrada_difdivnewton(void);
 
 

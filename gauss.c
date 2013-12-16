@@ -34,15 +34,24 @@ gauss_simple ( void )
     printf("\n\nIndique el numero de  variables: ");
     scanf("%d", &tam);
     A=crear_matriz(tam,tam);
+    //A[][]={{3,-0.1,-0.2},{0.1,7,3},{0.3,-0.2,10,}};
     B=crear_vector(tam);
+    //B[]={7.85,-19.3,71.4};
     X=crear_vector(tam);
-    printf("\nIntroduzca los coeficientes de la matriz A[][]");
+    printf("\nIntroduzca los coeficientes de la matriz A[][]\n");
     lee_matriz(A,tam,tam);
-    printf("\nIntroduzca los terminos independientes B[] ");
+    printf("\nIntroduzca los terminos independientes B[]\n ");
     lee_vector(B,tam);
-    eliminacion(A,X,tam,tam,B);
-    sustitucion(A,X,tam,tam,B);
-    printf("\nLa solucion a el sistema es:\n");
+    printf("\nMatriz aumentada original:\n");
+    imprime_matriz_aumentada(A,B,tam);
+    printf("\nEliminacion hacia adelante:\n\n");
+    eliminacion_didactica(A,X,tam,tam,B);
+    printf("\n\nSustitucion hacia atras:\n");
+    sustitucion_didactica(A,X,tam,tam,B);
+    printf("\n\nLa solucion a el sistema es:\n");
     imprime_vector(X,tam);
+    destruye_matriz(A,tam,tam);
+    destruye_vector(B);
+    destruye_vector(X);
 
 }		/* -----  end of function gauss_simple  ----- */
