@@ -35,16 +35,15 @@ int main()
                 break;
             case 'B':
                 menu_raices();
-        		ctrl_menu_raices();
-	        	break;
-            case 'C':
-                
+        	ctrl_menu_raices();
+        	break;
+            case 'C':                
                 ctrl_menu_sel();
                 break;
             case 'D':
                 break;
             case 'E':
-           		entrada_difdivnewton();
+           	entrada_difdivnewton();
                 break;
             case 'F':
                 break;

@@ -3,9 +3,9 @@
  *
  *       Filename:  raices-abiertos.c
  *
- *    Description:  Funciones de los metodos abiertos para ocalizar raices 
+ *    Description:  Funciones de los metodos cerrados para ocalizar raices 
  *
- *        Version:  0.2
+ *        Version:  0.2.1
  *        Created:  03/11/13 10:39:55
  *       Revision:  none
  *       Compiler:  gcc
@@ -32,13 +32,13 @@ double biseccion(double xa, double xb, double es, double *ea, int imax, int *ite
     f = evaluator_create (buffer);
     assert (f);
 
-
+printf("Metodo de Biseccion");
 
   //Se imprime la cabecera de la tabla solo si lo desea el usuario tabla == 1
   if(tabla == 1)
   {
 
-      printf ("\n\n|  i |      xa      |      xr      |      xb      |      ea      |     f(xr)    | \n");
+      printf ("\n\n|  i |      xa      |      xb      |      xr      |      ea      |     f(xr)    | \n");
       printf ("____________________________________________________________________________________\n");
  
   }
@@ -66,7 +66,7 @@ double biseccion(double xa, double xb, double es, double *ea, int imax, int *ite
 
       //Se imprimen los datos de la tabla si el usuario lo desea, tabla == 1
       if ( tabla == 1 ) {
-           printf ("| %2d | %12.8lf | %12.8lf | %12.8lf | %12.8lf | %12.8lf\n", *iter, xa, xr, xb, *ea, evaluator_evaluate_x(f,xr) );
+           printf ("| %2d | %12.8lf | %12.8lf | %12.8lf | %12.8lf | %12.8lf\n", *iter, xa, xb, xr, *ea, evaluator_evaluate_x(f,xr) );
 	    }
   }while((*ea > es ) && (*iter <= imax));
 
@@ -86,6 +86,8 @@ double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, 
 {
   double xr=xa, xrold;
   
+  printf("Metodo de la Regla Falsa");
+
   if ( tabla == 1 )
   {
       printf ("\n\n|  i  |    xa    |    xr    |    xb    |     ea     |    f(xr)   | \n");

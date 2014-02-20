@@ -2,7 +2,7 @@
 
 double f(double x)
 {
-    return tan(0.2*x)+0.5;
+    return 3*x*x-2;
 }
 
 double df(double x)

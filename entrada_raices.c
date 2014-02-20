@@ -66,7 +66,7 @@ entrada_cerrados (int op_met)
     scanf("%d",&tabla);
 
 
-    if(op_met == 0)
+    if(op_met == 1)
     {
 	if(tabla == 1)
 	    biseccion(xa, xb, es, &ea, imax, &iter, 1 ,  buffer);
