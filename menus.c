@@ -46,38 +46,41 @@ menu_raices ( void )
     printf("\nB.-Metodo de Regla Falsa");
 
     printf("\n\n---- Metodos de Abiertos");
-    printf("\nC.- Metodo del Punto Fijo");
-    printf("\nD.- Metodo de Newton-Raphson");
-    printf("\nE.- Metodo de la Secante");
+    printf("\nD.- Metodo del Punto Fijo");
+    printf("\nE.- Metodo de Newton-Raphson");
+    printf("\nF.- Metodo de la Secante");
+
+    printf("\n\n---- Metodos de Interpolacion");
+    printf("\nG.-Metodo de Diferencias Divididas de Newton");
  
     printf("\n\nZ.- Salir\n\n");
+}
 
-}		/* -----  end of function menu_raices  ----- */
+		/* -----  end of function menu_raices  ----- */
 
 
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  menu_sel
- *  Description:  Menu para los metodos de Solucion de Sistemas de Ecs Lineales
+ *  Description:  Menu para Solucion de Sitemas de Ecuaciones Lineales 
  * =====================================================================================
  */
     void
 menu_sel ( void )
 {
-    printf("Solución de Sistemas de Ecuaciones Lineales");
+    printf("Metodos para la Solucion de Ecuaciones Lineales");
     printf("\n\nSeleccione una Opcion");
 
-    printf("\n\n---- Métodos de Eliminacion");
-
-    printf("\nA.-Metodo de Gauss Simple");
+    printf("\nA.-Metodo de Gauss");
     printf("\nB.-Metodo de Gauss Modificado");
+    printf("\nC.-Metodo de Gauss-Jordan");
 
-    printf("\n\n---- Metodos de Iterativos");
-    printf("\nC.- Metodo de Gauss Seidel");
-    printf("\nD.- ");
-    printf("\nE.- ");
+
+    printf("\n\n---- Metodos Iterativos");
+    printf("\nD.- Metodo Gauss-Seidel");
  
     printf("\n\nZ.- Salir\n\n");
-
-   return ;
+   
 }		/* -----  end of function menu_sel  ----- */
+
+
