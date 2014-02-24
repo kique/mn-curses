@@ -38,6 +38,7 @@ int main()
         	ctrl_menu_raices();
         	break;
             case 'C':                
+		menu_sel();
                 ctrl_menu_sel();
                 break;
             case 'D':
