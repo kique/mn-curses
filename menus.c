@@ -4,12 +4,13 @@
  *  Description:  Menu General de todos los metodos numericos
  * =====================================================================================
  */
- 
+
 
 #include "header.h"
 
 void menu(void)
 {
+
     printf("Metodos Numericos");
     printf("\n\nSeleccione una Opcion");
 
@@ -23,7 +24,7 @@ void menu(void)
     printf("\nH.-Solucion de EDO");
     printf("\n");
     printf("\n");
- 
+
     printf("\n\nZ.- Salir\n\n");
 }
 
@@ -52,35 +53,7 @@ menu_raices ( void )
 
     printf("\n\n---- Metodos de Interpolacion");
     printf("\nG.-Metodo de Diferencias Divididas de Newton");
- 
+
     printf("\n\nZ.- Salir\n\n");
 }
-
-		/* -----  end of function menu_raices  ----- */
-
-
-/* 
- * ===  FUNCTION  ======================================================================
- *         Name:  menu_sel
- *  Description:  Menu para Solucion de Sitemas de Ecuaciones Lineales 
- * =====================================================================================
- */
-    void
-menu_sel ( void )
-{
-    printf("Metodos para la Solucion de Ecuaciones Lineales");
-    printf("\n\nSeleccione una Opcion");
-
-    printf("\nA.-Metodo de Gauss");
-    printf("\nB.-Metodo de Gauss Modificado");
-    printf("\nC.-Metodo de Gauss-Jordan");
-
-
-    printf("\n\n---- Metodos Iterativos");
-    printf("\nD.- Metodo Gauss-Seidel");
- 
-    printf("\n\nZ.- Salir\n\n");
-   
-}		/* -----  end of function menu_sel  ----- */
-
 

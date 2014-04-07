@@ -8,6 +8,7 @@
  #include <matheval.h>
  #include <assert.h>
  #include <ctype.h>
-#include <string.h>
+ #include <string.h>
+ #include <cdk.h>
 
 #endif // HEADER_H_INCLUDED
