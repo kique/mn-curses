@@ -3,7 +3,9 @@
 
  void menu(void);
  void menu_raices(void);
+ void menu_sel(void);
  void ctrl_menu_raices ( void );
+ void ctrl_menu_sel ( void );
  void entrada_cerrados (int op_met);
  void entrada_abiertos (int op_met);
  void entrada_cerrados (int);
@@ -18,6 +20,7 @@
  double gf(double);
 
  void gauss_simple ( void );
+ void gauss_jordan ( void );
  void eliminacion(double **a, double *x, int filas, int columnas, double *b);
  void sustitucion(double **a, double *x, int filas, int columnas, double *b);
  double ** crear_matriz (int filas, int columnas );

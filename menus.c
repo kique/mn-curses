@@ -57,3 +57,20 @@ menu_raices ( void )
     printf("\n\nZ.- Salir\n\n");
 }
 
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  menu_sel
+ *  Description:  
+ * =====================================================================================
+ */
+    void
+menu_sel ( void )
+{
+    printf("Metodos de Eliminacion");
+    printf("\n\nA.- Eliminacionn de Gauss simple");
+    printf("\n\nB.- Eliminacin de Gauss-Jordan");
+    printf("\n\n");
+
+
+    return ;
+}		/* -----  end of function menu_sel  ----- */

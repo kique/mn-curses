@@ -85,7 +85,7 @@ ctrl_menu_sel ( void )
     do{
     system("clear");
 
- //   menu_sel();
+    menu_sel();
     scanf(" %c",&opc);
 
         switch(toupper(opc))
@@ -96,6 +96,7 @@ ctrl_menu_sel ( void )
                 break;
             case 'B':
 		//Entrada metodo de Regla Falsa
+		gauss_jordan();
                 break;
             case 'C':
 		//Entrada Metodo Punto Fijo

@@ -26,7 +26,7 @@ int main()
     do{
 	system("clear");
         menu();
-	scanf("%c",&opc);
+	scanf(" %c",&opc);
 
         switch(toupper(opc))
         {
@@ -38,7 +38,7 @@ int main()
         	ctrl_menu_raices();
         	break;
             case 'C':                
-	//	menu_sel();
+		menu_sel();
                 ctrl_menu_sel();
                 break;
             case 'D':
@@ -53,14 +53,18 @@ int main()
 	    case 'H':
 		break;
             case 'Z':
-                printf("\nAdios!");
+                printf("\nAdios!\n\n");
                 break;
  
 	    default:
                 printf("\nOpcion Invalida\n");
         }
-        printf("\n\nDeseas realizar otro calculo?: (s/n)");
-        scanf(" %c",&rep);
+
+	if(opc != 'z')
+	{
+        	printf("\n\nDeseas realizar otro calculo?: (s/n)");
+        	scanf(" %c",&rep);
+	}
 	//getchar();
 	
     }while(rep=='s');
