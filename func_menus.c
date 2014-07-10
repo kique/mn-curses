@@ -95,17 +95,17 @@ ctrl_menu_sel ( void )
                 gauss_simple();
                 break;
             case 'B':
-		//Entrada metodo de Regla Falsa
+		//Entrada metodo de 
 		gauss_jordan();
                 break;
             case 'C':
-		//Entrada Metodo Punto Fijo
+		//
                 break;
             case 'D':
-		//Entrada Metodo Newton - Raphson
+		//
                 break;
             case 'E':
-		//Entrada Metodo Secante
+		//
                 break;
 	    case 'Z':
 		break;
