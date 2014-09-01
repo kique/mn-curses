@@ -8,7 +8,7 @@
  *        Version:  1.0
  *        Creado:  10/11/13 10:34:34
  *       Revision:  none
- *       Compilador:  gcc
+ *       Compilador: 
  *
  *         Autor:  YOUR NAME (), 
  *   COmpilacion: gcc grafica_simple1.c -lplplotd -lm -I/usr/include/plplot -o grafica_simple1.bin 
@@ -21,6 +21,7 @@
 #include "prototipos.h"
 
 #define NSIZE    101
+#define BUFFER_SIZE 256 
 
     void
 grafica( void )
@@ -29,8 +30,13 @@ grafica( void )
     PLFLT *x, *y;
     PLFLT xmin, xmax, ymin = -1., ymax = 1.;
     PLINT space0 = 0, mark0 = 0, space1 = 1500, mark1 = 1500;
-    int n,i;
+    
+    int n,length;
+
     double xa, xb, inc;
+    char buffer[BUFFER_SIZE] //Buffer para almacenar la expresion matematica para matheval
+    
+    printf("f(X) = ");
 
     printf("\nIngrese el límite inferior del intervalo: ");
     scanf("%lf",&xa);
