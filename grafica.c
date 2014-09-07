@@ -27,16 +27,31 @@
 grafica( void )
 {
 
-    PLFLT *x, *y;
+    PLFLT *x, *y, xtemp;
     PLFLT xmin, xmax, ymin = -1., ymax = 1.;
     PLINT space0 = 0, mark0 = 0, space1 = 1500, mark1 = 1500;
     
-    int n,length;
+    int n,i,length;
 
     double xa, xb, inc;
-    char buffer[BUFFER_SIZE] //Buffer para almacenar la expresion matematica para matheval
+    char buffer[BUFFER_SIZE]; //Buffer para almacenar la expresion matematica para matheval
+   
+    void *funcion;		/*  Evaluators for function and function derivative.  */
+ 
     
     printf("f(X) = ");
+    scanf("%s",buffer);    
+    //fgets (buffer, BUFFER_SIZE, stdin);
+    length = strlen (buffer);
+    if (length > 0 && buffer[length - 1] == '\n')
+	buffer[length - 1] = '\0';
+    
+    /*  Create evaluator for function.  */
+    funcion = evaluator_create(buffer);
+    assert(funcion);
+
+
+
 
     printf("\nIngrese el límite inferior del intervalo: ");
     scanf("%lf",&xa);
@@ -57,12 +72,15 @@ grafica( void )
 	for ( i = 0; i < n ; i++ )
 	{
 	    x[i] = (PLFLT) ( xa );
-	    y[i] = ymax * (PLFLT) f(x[i]);
+	    xtemp = x[i];
+	    y[i] = ymax * (PLFLT) evaluator_evaluate_x(funcion,xtemp);
 	    xa=xa+inc;
 	}
 
     // Parse and process command line arguments
     //plparseopts( &argc, argv, PL_PARSE_FULL );
+    
+    plsdev("xwin"); //Se elige el driver para salida grafica
 
     // Initialize plplot
     plinit();
@@ -85,6 +103,8 @@ grafica( void )
     plend();
     free(x);
     free(y);
+
+    evaluator_destroy(funcion);
     //exit( 0 );
 }
 

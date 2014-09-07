@@ -47,12 +47,9 @@ menu_raices ( void )
     printf("\nB.-Metodo de Regla Falsa");
 
     printf("\n\n---- Metodos de Abiertos");
-    printf("\nD.- Metodo del Punto Fijo");
-    printf("\nE.- Metodo de Newton-Raphson");
-    printf("\nF.- Metodo de la Secante");
-
-    printf("\n\n---- Metodos de Interpolacion");
-    printf("\nG.-Metodo de Diferencias Divididas de Newton");
+    printf("\nC.- Metodo del Punto Fijo");
+    printf("\nD.- Metodo de Newton-Raphson");
+    printf("\nE.- Metodo de la Secante");
 
     printf("\n\nZ.- Salir\n\n");
 }
