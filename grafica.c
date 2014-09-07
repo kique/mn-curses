@@ -27,7 +27,7 @@
 grafica( void )
 {
 
-    PLFLT *x, *y, xtemp;
+    PLFLT *x, *y;
     PLFLT xmin, xmax, ymin = -1., ymax = 1.;
     PLINT space0 = 0, mark0 = 0, space1 = 1500, mark1 = 1500;
     
@@ -72,8 +72,7 @@ grafica( void )
 	for ( i = 0; i < n ; i++ )
 	{
 	    x[i] = (PLFLT) ( xa );
-	    xtemp = x[i];
-	    y[i] = ymax * (PLFLT) evaluator_evaluate_x(funcion,xtemp);
+	    y[i] = ymax * (PLFLT) evaluator_evaluate_x(funcion,x[i]);
 	    xa=xa+inc;
 	}
 
