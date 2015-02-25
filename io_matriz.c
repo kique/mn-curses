@@ -48,7 +48,7 @@ double *
 crear_vector (int tam )
 {
     double *v;
-    v = (double *) malloc(tam * sizeof(double *));	
+    v = (double *) malloc(tam * sizeof(double));	
     return v;
 }		/* -----  end of function crea_vector  ----- */
 

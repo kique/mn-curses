@@ -81,7 +81,7 @@ void eliminacion_didactica(double **a, double *x, int filas, int columnas, doubl
         for(i = k+1;i <= n-1;i++)
         {
             factor = a[i][k]/a[k][k];
-            printf("\nFactor de eliminacion= %.6f/%.6f  por fila %d y restado a %d", a[i][k],a[k][k],i,i+1);
+            printf("\nFactor de eliminacion= %.6f/%.6f  por fila %d y restado a %d", a[i][k],a[k][k],k,i+1);
             for(j=k+1;j<=n-1;j++)
             {
                 a[i][j] = a[i][j]-factor*a[k][j];
