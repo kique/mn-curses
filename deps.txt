@@ -1,0 +1,13 @@
+Fedora 22 deps
+--------------
+ncurses-devel
+libmatheval
+libmatheval-devel
+cdk
+cdk-devel --> usar en fedora #include <cdk.h> , en Ubuntu #include <cdk/cdk.h>
+gsl
+gsl-devel
+plplot
+plplot-devel
+plplot-libs
+
