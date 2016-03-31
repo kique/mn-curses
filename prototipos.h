@@ -10,7 +10,7 @@
  void entrada_abiertos (int op_met);
  void entrada_cerrados (int);
  double biseccion(double, double, double, double *, int, int *, int ,char *);
- double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla);
+ double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla,char buffer[]);
  double newtonrap(double x0, double es, double *ea, int imax, int *iter, int tabla);
  double pfijo(double x0, double es, double *ea, int imax, int *iter, int tabla);
  double secante(double x0, double x1, double es, double *ea, int imax, int *iter, int tabla);

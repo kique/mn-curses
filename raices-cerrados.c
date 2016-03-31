@@ -82,9 +82,15 @@ printf("Metodo de Biseccion");
 
 }
 
-double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla)
+double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla, char buffer[])
 {
   double xr=xa, xrold;
+  
+  void *f;		/*  Evaluators for function and function derivative.  */
+ 
+  /*  Create evaluator for function.  */
+  f = evaluator_create (buffer);
+  assert (f);
   
   printf("Metodo de la Regla Falsa");
 
@@ -96,21 +102,21 @@ double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, 
 
   *iter = 0;
 
-  if (f(xa)*f(xb) < 0)
+  if (evaluator_evaluate_x(f,xa)*evaluator_evaluate_x(f,xb) < 0)
   {
 
     while( *iter < imax )
 	{
         
         xrold=xr;
-        xr = xb - (f(xb)*(xa - xb))/(f(xa) - f(xb));
+        xr = xb - (evaluator_evaluate_x(f,xb)*(xa - xb))/(evaluator_evaluate_x(f,xa) - evaluator_evaluate_x(f,xb));
        
         if (xr != 0)
         {
              *ea = fabs((xr-xrold)/xr)*100;
         }      
  
-        if (f(xa)*f(xr)<0)
+        if (evaluator_evaluate_x(f,xa)*evaluator_evaluate_x(f,xr)<0)
           {
             xb = xr;
           }
@@ -121,7 +127,7 @@ double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, 
         *iter = *iter + 1;
         
         if ( tabla == 1 ) {
-            printf ("| %3d | %8.4f | %8.4f | %8.4f | %8.4f | %8.4f |\n",*iter,xa, xr, xb, *ea, f(xr) );
+            printf ("| %3d | %8.4f | %8.4f | %8.4f | %8.4f | %8.4f |\n",*iter,xa, xr, xb, *ea, evaluator_evaluate_x(f,xr) );
 	    }
 
         if ( fabs(*ea) <= es )
@@ -129,13 +135,16 @@ double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, 
           break;
         }
 	}
-    if ( tabla == 1 ) {
+    
+  evaluator_destroy (f);
+  if ( tabla == 1 ) {
         printf ("\n\nLa Raiz es %6.4lf\n",xr);
         return 0;
-    }
-    else
+  }
+  else
        return xr;
   }
+
   return 0;
 }
 

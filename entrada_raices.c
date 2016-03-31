@@ -81,10 +81,10 @@ entrada_cerrados (int op_met)
     else
     {
 	if(tabla == 1)
-	    rfalsa(xa, xb, es, &ea, imax, &iter, tabla);
+	    rfalsa(xa, xb, es, &ea, imax, &iter, 1, buffer);
 	else if(tabla == 0)
 	{
-	    raiz =  rfalsa(xa, xb, es, &ea, imax, &iter, 0);
+	    raiz =  rfalsa(xa, xb, es, &ea, imax, &iter, 0, buffer);
 	    printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",raiz,ea,iter);
 	}
 	else

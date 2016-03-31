@@ -9,7 +9,7 @@
  #include <assert.h>
  #include <ctype.h>
  #include <string.h>
- #include <cdk/cdk.h>
+ #include <cdk.h>
  #include <gsl/gsl_math.h>
 
 #endif // HEADER_H_INCLUDED

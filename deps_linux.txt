@@ -1,0 +1,9 @@
+Dependencias para compilación y funcionamiento de mn-curses
+
+Fedora
+
+ncurses
+ncurses-devel
+
+gsl
+gsl-devel

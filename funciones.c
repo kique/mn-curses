@@ -2,12 +2,12 @@
 
 double f(double x)
 {
-    return 3*x*x+4*x-2;
+    return log(x)-sin(x);
 }
 
 double df(double x)
 {
-    return 6*x+4;
+    return 12*x*x+3;
 }
 
 double gf(double x)
