@@ -21,53 +21,53 @@
 
 int main()
 {
-    char opc,rep;
+  char opc,rep;
 
-    do{
-	system("clear");
-        menu();
-	scanf(" %c",&opc);
+  do{
+    system("clear");
+    menu();
+    scanf(" %c",&opc);
 
-        switch(toupper(opc))
-        {
-            case 'A':
-                grafica();
-                break;
-            case 'B':
-                menu_raices();
-        	ctrl_menu_raices();
-        	break;
-            case 'C':                
-		menu_sel();
-                ctrl_menu_sel();
-                break;
-            case 'D':
-                break;
-            case 'E':
-           	entrada_difdivnewton();
-                break;
-            case 'F':
-                break;
-            case 'G':
-	        break;
-	    case 'H':
-		break;
-            case 'Z':
-                printf("\nAdios!\n\n");
-                break;
- 
-	    default:
-                printf("\nOpcion Invalida\n");
-        }
+    switch(toupper(opc))
+    {
+      case 'A':
+        grafica();
+        break;
+      case 'B':
+        menu_raices();
+        ctrl_menu_raices();
+        break;
+      case 'C':                
+        menu_sel();
+        ctrl_menu_sel();
+        break;
+      case 'D':
+        break;
+      case 'E':
+        entrada_difdivnewton();
+        break;
+      case 'F':
+        break;
+      case 'G':
+        break;
+      case 'H':
+        break;
+      case 'Z':
+        printf("\nAdios!\n\n");
+        break;
 
-	if(opc != 'z')
-	{
-        	printf("\n\nDeseas realizar otro calculo?: (s/n)");
-        	scanf(" %c",&rep);
-	}
-	//getchar();
-	
-    }while(rep=='s');
+      default:
+        printf("\nOpcion Invalida\n");
+    }
 
-    return 0;
+    if(opc != 'z')
+    {
+      printf("\n\nDeseas realizar otro calculo?: (s/n)");
+      scanf(" %c",&rep);
+    }
+    //getchar();
+
+  }while(rep=='s');
+
+  return 0;
 }

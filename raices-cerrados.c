@@ -20,8 +20,6 @@
 #include "prototipos.h"
 
 
-#define BUFFER_SIZE 256
-
 double biseccion(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla, char buffer[])
 {
   double  xr,xrold,test;

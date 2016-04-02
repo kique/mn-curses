@@ -1,6 +1,8 @@
 #ifndef PROTOTIPOS_H_INCLUDED
 #define PROTOTIPOS_H_INCLUDED
 
+#define BUFFER_SIZE 256
+
  void menu(void);
  void menu_raices(void);
  void menu_sel(void);
