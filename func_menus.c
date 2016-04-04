@@ -28,35 +28,47 @@
   void
 ctrl_menu_raices ( void )
 {
-  char opc,resp, buffer[BUFFER_ZISE];
+  char opc,resp,reuse, expresion1[BUFFER_SIZE], expresion2[BUFFER_SIZE];
+  int ban = 0;
 
   do{
     system("clear");
 
     menu_raices();
     scanf(" %c",&opc);
+    
+    if (ban == 0)
+    {
+	    lee_expresion(expresion1);
+    }
+
 
     switch(toupper(opc))
     {
       case 'A':
         //Entrada Metodo de Biseccion
-        entrada_cerrados(1);
+        entrada_cerrados(1, expresion1);
+	ban = 0;
         break;
       case 'B':
         //Entrada metodo de Regla Falsa
-        entrada_cerrados(2);
+        entrada_cerrados(2, expresion1);
+	ban = 0;
         break;
       case 'C':
         //Entrada Metodo Punto Fijo
-        entrada_abiertos(0);
+        entrada_abiertos(0, expresion1);
+	ban = 0;
         break;
       case 'D':
         //Entrada Metodo Newton - Raphson
-        entrada_abiertos(1);
+        entrada_abiertos(1, expresion1);
+	ban = 0;
         break;
       case 'E':
         //Entrada Metodo Secante
-        entrada_abiertos(2);
+        entrada_abiertos(2, expresion1);
+	ban = 0;
         break;
       case 'Z':
         break;
@@ -64,8 +76,15 @@ ctrl_menu_raices ( void )
       default:
         printf("\nOpcion Invalida\n");
     }
+    
     printf("\n\nDeseas realizar otro calculo?: (s/n)");
     scanf(" %c",&resp);
+    printf("\nDeseas utilizar la misma expresion?: (s/n)");
+    scanf(" %c",&reuse);
+    
+    if(reuse == 's')
+	    ban = 1;
+
   }while(resp=='s');
 
 }		/* -----  end of function menu_raices  ----- */

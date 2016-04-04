@@ -8,15 +8,16 @@
  void menu_sel(void);
  void ctrl_menu_raices ( void );
  void ctrl_menu_sel ( void );
- void entrada_cerrados (int op_met);
- void entrada_abiertos (int op_met);
- void entrada_cerrados (int);
+ void entrada_cerrados (int op_met, char *);
+ void entrada_abiertos (int op_met, char *);
  double biseccion(double, double, double, double *, int, int *, int ,char *);
- double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla,char buffer[]);
- double newtonrap(double x0, double es, double *ea, int imax, int *iter, int tabla);
- double pfijo(double x0, double es, double *ea, int imax, int *iter, int tabla);
- double secante(double x0, double x1, double es, double *ea, int imax, int *iter, int tabla);
+ double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla,char *);
+ double newtonrap(double x0, double es, double *ea, int imax, int *iter, int tabla, char *, char *);
+ double pfijo(double x0, double es, double *ea, int imax, int *iter, int tabla, char *);
+ double secante(double x0, double x1, double es, double *ea, int imax, int *iter, int tabla, char *);
  void grafica( void );
+
+ void lee_expresion (char *);
  double f(double);
  double df(double);
  double gf(double);

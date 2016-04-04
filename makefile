@@ -3,7 +3,10 @@
 #
 
 CC = gcc # Compiler to use
-OPTIONS = -O2 -g -Wall -lm -lncurses -lplplotd -lmatheval -lcdk -lgsl -lgslcblas# -g for debug, -O2 for optimise and -Wall additional messages
+
+# Se cambio de -lplplotd a - lplplot en Fedora 23 para lograr compilarlo, se encontrol la directiva correcta con: pkg-config --libs plplot
+OPTIONS = -O2 -g -Wall -lm -lncurses -lplplot -lmatheval -lcdk -lgsl -lgslcblas# -g for debug, -O2 for optimise and -Wall additional messages
+
 INCLUDES = -I/usr/include/plplot -I/usr/local/include -I/usr/local/lib # Directory for header file
 FUENTES=\
 		main.c \

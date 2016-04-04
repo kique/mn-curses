@@ -29,10 +29,9 @@
  * =====================================================================================
  */
   void
-entrada_cerrados (int op_met)
+entrada_cerrados (int op_met, char *buffer)
 {
 
-  int length;			/*  Length of above buffer. */
 
   int imax,iter=0,tabla;
   double xa,xb,ea=100,es,raiz;
@@ -43,14 +42,7 @@ entrada_cerrados (int op_met)
   printf("Programa para calcular una raiz por el Metodo de %s\n", (op_met == 1)? strcpy(id_metodo,"Biseccion"):strcpy(id_metodo,"Falsa Posicion"));
   printf("\nIntroduzca al funcion que desa utilizar: ");
 
-
-  /* Se lee la expresion matematica */
-  printf ("f(x) = ");
-  scanf("%s",buffer);
-  //    fgets (buffer, BUFFER_SIZE, stdin);
-  length = strlen (buffer);
-  if (length > 0 && buffer[length - 1] == '\n')
-    buffer[length - 1] = '\0';
+  
 
   printf ("\nDe el valor del limite izquierdo xa: ");
   scanf("%lf",&xa);
@@ -101,10 +93,13 @@ entrada_cerrados (int op_met)
  * =====================================================================================
  */
   void
-entrada_abiertos(int op_met)
+entrada_abiertos(int op_met, char *buffer)
 {
 
   int imax,iter=0,tabla;
+
+  char buffer2[BUFFER_SIZE];
+
   double x0,x1,ea=100,es,raiz;
 
   system("clear");
@@ -134,10 +129,10 @@ entrada_abiertos(int op_met)
       if(op_met == 0)
       {
         if(tabla == 1)
-          pfijo(x0, es, &ea, imax, &iter, tabla);
+          pfijo(x0, es, &ea, imax, &iter, tabla, buffer);
         else if(tabla == 0)
         {
-          raiz = pfijo(x0, es, &ea, imax, &iter, tabla);
+          raiz = pfijo(x0, es, &ea, imax, &iter, tabla, buffer);
           printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",raiz,ea,iter);
         }
         else
@@ -156,14 +151,18 @@ entrada_abiertos(int op_met)
       scanf("%d",&imax);
       printf ("\nDesea imprimir tabla de resultados o solamente la raiz? (1=tabla / 0=raiz ): ");
       scanf("%d",&tabla);
+      
+      printf("\nEscriba la derivada de la funcion: ");
+
+      lee_expresion(buffer2);
 
       if(op_met == 1)
       {
         if(tabla == 1)
-          newtonrap(x0, es, &ea, imax, &iter, tabla);
+          newtonrap(x0, es, &ea, imax, &iter, tabla, buffer, buffer2);
         else if(tabla == 0)
         {
-          raiz=newtonrap(x0, es, &ea, imax, &iter, tabla);
+          raiz=newtonrap(x0, es, &ea, imax, &iter, tabla, buffer, buffer2);
           printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",raiz,ea,iter);
         }
         else
@@ -188,10 +187,10 @@ entrada_abiertos(int op_met)
       if(op_met == 2)
       {
         if(tabla == 1)
-          secante(x0, x1, es, &ea, imax, &iter, tabla);
+          secante(x0, x1, es, &ea, imax, &iter, tabla, buffer);
         else if(tabla == 0)
         {
-          raiz = secante(x0, x1, es, &ea, imax, &iter, tabla);
+          raiz = secante(x0, x1, es, &ea, imax, &iter, tabla, buffer);
           printf("\nLa raiz es %lf con un error rel porc de %lf encontrado en %d iteraciones.",raiz ,ea,iter);
         }
         else
@@ -208,3 +207,27 @@ entrada_abiertos(int op_met)
 
   return;
 }		/* -----  end of function entrada_cerrados  ----- */
+
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  lee_expresion
+ *  Description:  
+ * =====================================================================================
+ */
+	void 
+lee_expresion ( char *buffer  )
+{
+  int length;			/*  Length of above buffer. */
+
+  /* Se lee la expresion matematica */
+  printf ("f(x) = ");
+  scanf("%s",buffer);
+
+  //    fgets (buffer, BUFFER_SIZE, stdin);
+  length = strlen (buffer);
+
+  if (length > 0 && buffer[length - 1] == '\n')
+    buffer[length - 1] = '\0';
+  
+}		/* -----  end of function lee_expresion  ----- */
