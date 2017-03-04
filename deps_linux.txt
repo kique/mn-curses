@@ -4,6 +4,19 @@ Fedora
 
 ncurses
 ncurses-devel
+ncurses-c++-libs
 
 gsl
 gsl-devel
+
+libmatheval 
+libmatheval-devel
+
+cdk 
+cdk-devel
+
+plplot 
+plplot-devel
+plplot-data
+plplot-libs
+	
