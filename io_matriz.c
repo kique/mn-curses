@@ -18,25 +18,6 @@
 #include "header.h"
 #include "prototipos.h"
 
-/* 
- * ===  FUNCTION  ======================================================================
- *         Name:  crea_matriz
- *  Description:  crea matrices de tamanio variable
- * =====================================================================================
- */
-    double **
-crear_matriz (int filas, int columnas )
-{
-    double **m;
-    int j;
-
-    m = (double **) malloc(filas * sizeof(double *));
-    for(j=0;j< filas; j++)
-        m[j]=(double *)malloc(columnas * sizeof(double));
-
-    return m;
-}		/* -----  end of function crear_matriz  ----- */
-
 
 /* 
  * ===  FUNCTION  ======================================================================
@@ -69,6 +50,25 @@ lee_vector ( double *v, int tam )
     }
 
 }		/* -----  end of function lee_vector  ----- */
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  imprime_vector
+ *  Description:  Imprime un vector dinámico
+ * =====================================================================================
+ */
+    void
+imprime_vector ( double *v, int tam )
+{
+    int i;
+
+    for (i = 0; i < tam; i++) {
+        printf("x[%d] = [ %11.6lf ] \n",i+1,v[i]);
+    }
+}		/* -----  end of function imprime_vector  ----- */
+
+
+
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  destruye_vector
@@ -80,6 +80,26 @@ destruye_vector ( double *v )
 {
     free(v);
 }		/* -----  end of function destuye_vector  ----- */
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  crea_matriz
+ *  Description:  crea matrices de tamanio variable
+ * =====================================================================================
+ */
+    double **
+crear_matriz (int filas, int columnas )
+{
+    double **m;
+    int j;
+
+    m = (double **) malloc(filas * sizeof(double *));
+    for(j=0;j< filas; j++)
+        m[j]=(double *)malloc(columnas * sizeof(double));
+
+    return m;
+}		/* -----  end of function crear_matriz  ----- */
+
 
 
 /* 
@@ -166,20 +186,4 @@ imprime_matriz_aumentada ( double **a, double *b, int tam )
         printf("\n");
     }
 }		/* -----  end of function imprime_matriz_aumentada  ----- */
-
-/* 
- * ===  FUNCTION  ======================================================================
- *         Name:  imprime_vector
- *  Description:  Imprime un vector dinámico
- * =====================================================================================
- */
-    void
-imprime_vector ( double *v, int tam )
-{
-    int i;
-
-    for (i = 0; i < tam; i++) {
-        printf("x[%d] = [ %11.6lf ] \n",i+1,v[i]);
-    }
-}		/* -----  end of function imprime_vector  ----- */
 
