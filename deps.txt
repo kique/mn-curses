@@ -11,3 +11,6 @@ plplot
 plplot-devel
 plplot-libs
 
+Instruccion Fedora 25
+
+dnf install ncurses-devel libmatheval libmatheval-devel cdk cdk-devel gsl gsl-devel plplot plplot-devel plplot-libs
