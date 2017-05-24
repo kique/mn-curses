@@ -2,7 +2,7 @@
 
 double f(double x)
 {
-    return log(x)-sin(x);
+    return exp(-x)-sin(x);
 //    return x*x*x-2*x*x-3;
 }
 
