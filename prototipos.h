@@ -15,6 +15,12 @@
  double newtonrap(double x0, double es, double *ea, int imax, int *iter, int tabla, char *, char *);
  double pfijo(double x0, double es, double *ea, int imax, int *iter, int tabla, char *);
  double secante(double x0, double x1, double es, double *ea, int imax, int *iter, int tabla, char *);
+ 
+ void entrada_integracion ( void );
+ double TrapecioM ( double h, int n, double *f );
+
+ void NewtonInt(double *pX, double *pY, int n, double xi, double *ptrYint, double *ptrEa );
+
  void grafica( void );
 
  void lee_expresion (char *);
