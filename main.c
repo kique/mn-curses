@@ -19,6 +19,15 @@
 #include "header.h"
 #include "prototipos.h"
 
+/**
+ * @brief 
+ *
+ * Esta es la funcion principal donde se ejecuta el menu con las opciones generales
+ * para llevar a los respectivos sub menus, los cuales se desplegan llamando a sus 
+ * respectivas funciones
+ *
+ * @return 0
+ */
 int main()
 {
   char opc,rep;

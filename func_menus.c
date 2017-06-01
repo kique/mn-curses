@@ -25,7 +25,30 @@
  *  Description:  Selectiva para l menu de raices
  * =====================================================================================
  */
-  void
+
+      
+/**
+ * @brief Funcion que llama a las funciones de entrada de datos para los metodos
+ *
+ * Funcion que llama a las funciones de entrada de datos que corresponda segun el metodo
+ * que el usuario decida ejecutar
+ *
+ * \f[
+ *   |I_2|=\left| \int_{0}^T \psi(t) 
+ *            \left\{ 
+ *               u(a,t)-
+ *               \int_{\gamma(t)}^a 
+ *               \frac{d\theta}{k(\theta,t)}
+ *               \int_{a}^\theta c(\xi)u_t(\xi,t)\,d\xi
+ *            \right\} dt
+ *         \right|
+ * \f]
+ *
+ *
+ * @ return void
+ *
+ */
+void
 ctrl_menu_raices ( void )
 {
   char opc,resp,reuse, expresion1[BUFFER_SIZE], expresion2[BUFFER_SIZE];
