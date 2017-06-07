@@ -5,6 +5,7 @@
 *.gch
 metodos_bin
 makefileOLD
+.ycm_extra_conf.py
 
 #Ignorando una carpeta
 
