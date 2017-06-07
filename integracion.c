@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-#include "header.h"
-#include "prototipos.h"
-=======
 /*
  * =====================================================================================
  *
@@ -23,21 +18,10 @@
  */
 
 #include "header.h"
->>>>>>> c30c26b28c20d0c0a86dee8566a09720d27f001f
+#include "prototipos.h"
 
 
-/* 
- * ===  FUNCTION  ======================================================================
-<<<<<<< HEAD
- *         Name:  TrapecioM
-=======
- *         Name:  Trapeciom
->>>>>>> c30c26b28c20d0c0a86dee8566a09720d27f001f
- *  Description:  
- * =====================================================================================
- */
 	double
-<<<<<<< HEAD
 TrapecioM ( double h, int n, double *f )
 {
 	double sum;
@@ -53,11 +37,10 @@ TrapecioM ( double h, int n, double *f )
 	
 	return h*sum/2;
 }		/* -----  end of function TrapecioM  ----- */
-=======
 Trapeciom ( double a, double b, int n )
 {
 	
 	return ;
 }		/* -----  end of function Trapeciom  ----- */
 
->>>>>>> c30c26b28c20d0c0a86dee8566a09720d27f001f
+
