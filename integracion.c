@@ -24,6 +24,7 @@
 	double
 TrapecioM ( double h, int n, double *f )
 {
+	int i;
 	double sum;
 
 	sum = f[0];
@@ -37,10 +38,5 @@ TrapecioM ( double h, int n, double *f )
 	
 	return h*sum/2;
 }		/* -----  end of function TrapecioM  ----- */
-Trapeciom ( double a, double b, int n )
-{
-	
-	return ;
-}		/* -----  end of function Trapeciom  ----- */
 
 

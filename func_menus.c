@@ -127,7 +127,7 @@ ctrl_menu_sel ( void )
   do{
     system("clear");
 
-    menu_sel();
+//    menu_sel();
     scanf(" %c",&opc);
 
     switch(toupper(opc))

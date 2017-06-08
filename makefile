@@ -21,6 +21,9 @@ FUENTES=\
 		io_matriz.c\
 		gauss.c\
 		op_matrices.c\
+		integracion.c\
+		entrada_integracion.c\
+		regresion.c\
 
 
 #FUENTES=%.c

@@ -47,16 +47,16 @@ int main()
         ctrl_menu_raices();
         break;
       case 'C':                
-        menu_sel();
+//        menu_sel();
         ctrl_menu_sel();
         break;
       case 'D':
         break;
       case 'E':
         entrada_difdivnewton();
-        break;
+	break;
       case 'F':
-        menu_integracion();
+//        menu_integracion();
 	break;
       case 'G':
         break;

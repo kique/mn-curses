@@ -12,7 +12,7 @@
 void
 entrada_integracion ( void )
 {
-	double a,b,h,*f;
+	double a,b,h,*fx;
 	int n,i;
 
 	printf("\nDar el valor inicial del intervalo: ");
@@ -20,17 +20,17 @@ entrada_integracion ( void )
 	printf("\nDar el valor final del intervalo: ");
 	scanf("lf",&b);
 	printf("\nDar el numero de segmentos: ");
-	scanf("lf",& n);
+	scanf("lf",&n);
 
-	f = crear_vector(n);
+	fx = crear_vector(n);
 
 	h = (b-a)/n;
 	
 		
 	for ( i = 0; i < n; i++ ) {
-		f[i] = f(a + i*h); //Se incrementa h veces desde el valor inicial
+		fx[i] = f(a + i*h); //Se incrementa h veces desde el valor inicial
 	}
 
-	printf("\nEl valor de la integral es: %lf", TrapecioM(h,n,f));
+	printf("\nEl valor de la integral es: %lf", TrapecioM(h,n,fx));
 
 }		/* -----  end of function entrada_integracion  ----- */

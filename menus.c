@@ -54,6 +54,5 @@ menu_raices ( void )
     printf("\nG.-Metodo de Diferencias Divididas de Newton");
  
     printf("\n\nZ.- Salir\n\n");
-}
 
 }		/* -----  end of function menu_raices  ----- */
