@@ -9,7 +9,7 @@ La idea es obtener un programa codificado en lenguaje ANSI C, con el uso de dife
 que complementen la funcionalidad del programa con fines académicos, por ejemplo:
 
 |Biblioteca      |  Uso                               |
-|-----------------------------------------------------|
+|----------------|------------------------------------|
 |Matheval        | Análisis de Expresiones Matemáticas|
 |Matplotlib      | Graficación de funciones           |
 |CDK             | Manejo de pantalla con Ncurses     |
@@ -19,10 +19,8 @@ que complementen la funcionalidad del programa con fines académicos, por ejempl
 
 Los métodos numéricos a implementar son los siguientes
 
-Métodos Numéricos
------------------
 
-| Métodos                                      | Avance % |
+| Método                                       | Avance % |
 |----------------------------------------------|----------|
 |* Localización de Raíces                      |          |
 |  * Métodos Cerrados                          |          |
@@ -33,9 +31,8 @@ Métodos Numéricos
 |    * Newton-Raphson                          |   100%   |
 |    * Secante                                 |   100%   |
 |* Solución de Sistemas de Ecuaciones Lineales |          |
-|  * Método de Gauss Simple                    |          |
-|  * Método de Gauss Seidel                    |          |
-|                                              |          |
+|  * Método de Gauss Simple                    |   100%   |
+|  * Método de Gauss Seidel                    |   100%   |
 |* Métodos de Interpolación                    |          |
 |  * Diferencias Divididas de Newton           |   100%   |
 
