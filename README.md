@@ -1,28 +1,45 @@
 Métodos Numéricos con Ncurses en lenguaje C
 ===========================================
 
-El objetivo de este proyecto es tener un programa con los principales Métodos Numéricos que se enseñan en las
-universidades con el fin de permitir al docente demostrar la impleentacion y la diferencias entre cada uno de ellos.
+El objetivo de este proyecto es tener un programa con los principales Métodos Numéricos que se enseñan en cursos de 
+nivel licenciatura con el fin de permitir al docente ejemplificar la implementacion y la diferencias entre cada uno de ellos
+al tener diferentes algoritmos que comparar.
 
-Se pretende primero implementar los metodos numéricos que muestren una salida parecida a las funciones de GSL, donde
-podemos pedir que se imprima la tabla de resultados o solamente el resultado, error, numero de iteraciones, etc.
+La idea es obtener un programa codificado en lenguaje ANSI C, con el uso de diferentes bibliotecas libres de diverso propósito
+que complementen la funcionalidad del programa con fines académicos, por ejemplo:
 
-Posteriormente se pretende afinar la integración de un arutina de navegacion (ya implementada) con PLplot.
+|Biblioteca      |  Uso                               |
+|-----------------------------------------------------|
+|Matheval        | Análisis de Expresiones Matemáticas|
+|Matplotlib      | Graficación de funciones           |
+|CDK             | Manejo de pantalla con Ncurses     |
+|GSL             | Biblioteca científica GNU          |
+                          
 
-Por últmo se pretende integrar todo esto a una interfaz en modo texto con Ncurses
 
-Métodos Numéricos a implementar 
--------------------------------
+Los métodos numéricos a implementar son los siguientes
 
-| Métodos                                      | Avance |
-|----------------------------------------------|--------|
-|* Localización de Raíces                      |        |
-|  * Métodos Cerrados                          |        |
-|    * Bisección                               |   OK   |
-|    * Regla Falsa                             |   OK   |
-|  * Métodos Abiertos                          |        |
-|    * Punto Fijo                              |   OK   |
-|    * Newton-Raphson                          |   OK   |
-|    * Secante                                 |   OK   |
-|* Solución de Sistemas de Ecuaciones Lineales |        |
+Métodos Numéricos
+-----------------
+
+| Métodos                                      | Avance % |
+|----------------------------------------------|----------|
+|* Localización de Raíces                      |          |
+|  * Métodos Cerrados                          |          |
+|    * Bisección                               |   100%   |
+|    * Regla Falsa                             |   100%   |
+|  * Métodos Abiertos                          |          |
+|    * Punto Fijo                              |   100%   |
+|    * Newton-Raphson                          |   100%   |
+|    * Secante                                 |   100%   |
+|* Solución de Sistemas de Ecuaciones Lineales |          |
+|  * Método de Gauss Simple                    |          |
+|  * Método de Gauss Seidel                    |          |
+|                                              |          |
+|* Métodos de Interpolación                    |          |
+|  * Diferencias Divididas de Newton           |   100%   |
+
+
+También se han implementado la lectura de funciones matemáticas leidas por teclado ygraficacion de funciones leidas del mismo modo.
+
 
