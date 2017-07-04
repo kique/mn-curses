@@ -19,29 +19,6 @@ que complementen la funcionalidad del programa con fines académicos, por ejempl
 
 Los métodos numéricos a implementar son los siguientes
 
-<<<<<<< HEAD
-
-| Método                                       | Avance % |
-|----------------------------------------------|----------|
-|* Localización de Raíces                      |          |
-|  * Métodos Cerrados                          |          |
-|    * Bisección                               |   100%   |
-|    * Regla Falsa                             |   100%   |
-|  * Métodos Abiertos                          |          |
-|    * Punto Fijo                              |   100%   |
-|    * Newton-Raphson                          |   100%   |
-|    * Secante                                 |   100%   |
-|* Solución de Sistemas de Ecuaciones Lineales |          |
-|  * Método de Gauss Simple                    |   100%   |
-|  * Método de Gauss Seidel                    |   100%   |
-|* Métodos de Interpolación                    |          |
-|  * Diferencias Divididas de Newton           |   100%   |
-
-
-También se han implementado la lectura de funciones matemáticas leidas por teclado ygraficacion de funciones leidas del mismo modo.
-
-=======
->>>>>>> 4029c4996d44cfec2f10b6ee947ee115b41f68fa
 
 | Método                                       | Avance % |
 |----------------------------------------------|----------|
