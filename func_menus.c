@@ -51,7 +51,7 @@
 void
 ctrl_menu_raices ( void )
 {
-  char opc,resp,reuse, expresion1[BUFFER_SIZE], expresion2[BUFFER_SIZE];
+  char opc,resp,reuse, expresion1[BUFFER_SIZE] /* , expresion2[BUFFER_SIZE]*/;
   int ban = 0;
 
   do{

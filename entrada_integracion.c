@@ -16,11 +16,11 @@ entrada_integracion ( void )
 	int n,i;
 
 	printf("\nDar el valor inicial del intervalo: ");
-	scanf("lf",&a);
+	scanf("%lf",&a);
 	printf("\nDar el valor final del intervalo: ");
-	scanf("lf",&b);
+	scanf("%lf",&b);
 	printf("\nDar el numero de segmentos: ");
-	scanf("lf",&n);
+	scanf("%d",&n);
 
 	fx = crear_vector(n);
 
