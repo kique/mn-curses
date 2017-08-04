@@ -50,12 +50,14 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 {
 	int i, j, k, l;
 
-	double **apA, *apYReg, sum;
+	double **apA, *apYReg, *apSol, sum;
 
 
 	apA = crear_matriz(m+1,m+1);                /* Creamos la matriz cuadrada de nxn  */
 
 	apYReg = crear_vector(m+1);               /* Creamos el vector para los terminos independientes */
+
+	apSol = crear_vector(m+1);
 
 
 	if ( n <= m+1 ) {
@@ -64,27 +66,36 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 	}
 
 	
-	for ( i=0; i <= m+1 ; i++ )
+	for ( i=0; i < m+1 ; i++ )
 	{
 
 		for ( j=0; j <= i; j++ ) {
-			k = i + j - 2;
+
+			k = i + j; // Ajuste en algoritmo de Chapra porque el indice comienza desde 0 y no es necesario restar 2 para generar exponentes
 			sum = 0;
 
 
-			for ( l = 0; l <= n; l++ ) {
+			for ( l = 0; l < n; l++ ) {
+
 				sum = sum + pow( apX[l] , k );
+
 			}
+
 			apA[i][j] = sum;
 			apA[j][i] = sum;
+
 		}
 
 		sum = 0;
 		
-		for ( l=0; l <= n; l++ ) {
-			sum = sum + apY[l]*pow(apX[l],i-1);
+		for ( l=0; l < n; l++ ) {
+
+			sum = sum + apY[l]*pow(apX[l],i); // Ajuste del Algoritmo de Chapra, no se resta 1 para generar exponentes
+
 		}
+
 		apYReg[i] = sum;
+
 	}
 
 
@@ -94,12 +105,24 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 	 *  coeficientes de la funcion
 	 *-----------------------------------------------------------------------------*/
 	
-	imprime_matriz_aumentada(apA, apYReg,n);
+	printf("\n\n");
+
+	imprime_matriz(apA,m+1,m+1);
+
+	printf("\n\n");
+	
+	imprime_vector(apYReg,m+1);
+
+	eliminacion(apA,apSol,m,m,apYReg);
+
+	sustitucion(apA, apSol, m, m, apYReg);
+
+	imprime_vector(apSol, m+1);
 
 	destruye_matriz(apA,m+1,m+1);
 
+	destruye_vector(apSol);
+	
 	destruye_vector(apYReg);
-
-
 
 }		/* -----  end of function regresion_poli  ----- */
