@@ -51,6 +51,7 @@ int main()
         ctrl_menu_sel();
         break;
       case 'D':
+	regresion_entrada();
         break;
       case 'E':
         entrada_difdivnewton();
