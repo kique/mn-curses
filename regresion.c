@@ -1,7 +1,6 @@
 #include "header.h"
 #include "prototipos.h"
-
-
+#include <gsl/gsl_linalg.h>
 
 /* 
  * ===  FUNCTION  ======================================================================
@@ -29,7 +28,7 @@ regresion_entrada ( void )
 	lee_vector(apX,n);
 	printf("\n\nDar los valores de las ordenadas: ");
 	lee_vector(apY,n);
-	
+
 
 	regresion_poli(m,n,apX,apY);
 
@@ -65,7 +64,7 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 		return;
 	}
 
-	
+
 	for ( i=0; i < m+1 ; i++ )
 	{
 
@@ -87,7 +86,7 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 		}
 
 		sum = 0;
-		
+
 		for ( l=0; l < n; l++ ) {
 
 			sum = sum + apY[l]*pow(apX[l],i); // Ajuste del Algoritmo de Chapra, no se resta 1 para generar exponentes
@@ -104,25 +103,57 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 	 *  para la solucion del sistema de ecuaciones lineals para obtener el valor de los
 	 *  coeficientes de la funcion
 	 *-----------------------------------------------------------------------------*/
-	
-	printf("\n\n");
+/* 
+ * 	printf("\n\n");
+ * 
+ * 	imprime_matriz(apA,m+1,m+1);
+ * 
+ * 	printf("\n\n");
+ * 
+ * 	imprime_vector(apYReg,m+1);
+ */
 
-	imprime_matriz(apA,m+1,m+1);
+	/* 	eliminacion(apA,apSol,m,m,apYReg);
+	 * 
+	 * 	sustitucion(apA, apSol, m, m, apYReg);
+	 * 
+	 * 	imprime_vector(apSol, m+1);
+	 * 
+	 */
 
-	printf("\n\n");
-	
-	imprime_vector(apYReg,m+1);
+	double a_data[] = {  6,  15,  55, 
+			    15,  55, 225, 
+                      	    55, 225, 979 };
 
-	eliminacion(apA,apSol,m,m,apYReg);
+	int dim = m+1;
 
-	sustitucion(apA, apSol, m, m, apYReg);
+	gsl_matrix_view ma
+		= gsl_matrix_view_array (a_data,dim, dim);
 
-	imprime_vector(apSol, m+1);
+	gsl_vector_view b
+		= gsl_vector_view_array (apYReg, dim);
+
+	gsl_vector *x = gsl_vector_alloc (dim);
+
+	int s;
+
+	gsl_permutation * p = gsl_permutation_alloc (dim);
+
+	gsl_linalg_LU_decomp (&ma.matrix, p, &s);
+
+	gsl_linalg_LU_solve (&ma.matrix, p, &b.vector, x);
+
+	printf ("x = \n");
+	gsl_vector_fprintf (stdout, x, "%g");
+
+	gsl_permutation_free (p);
+	gsl_vector_free (x);
+
 
 	destruye_matriz(apA,m+1,m+1);
 
 	destruye_vector(apSol);
-	
+
 	destruye_vector(apYReg);
 
 }		/* -----  end of function regresion_poli  ----- */
