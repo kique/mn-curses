@@ -33,6 +33,8 @@ Los métodos numéricos a implementar son los siguientes
 |* Solución de Sistemas de Ecuaciones Lineales |          |
 |  * Método de Gauss Simple                    |   100%   |
 |  * Método de Gauss Seidel                    |   100%   |
+|* Ajuste de Curvas                            |          |
+|  *Regresion Polinomilal                      |   100%   |
 |* Métodos de Interpolación                    |          |
 |  * Diferencias Divididas de Newton           |   100%   |
 
