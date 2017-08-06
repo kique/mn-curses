@@ -103,15 +103,15 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 	 *  para la solucion del sistema de ecuaciones lineals para obtener el valor de los
 	 *  coeficientes de la funcion
 	 *-----------------------------------------------------------------------------*/
-/* 
- * 	printf("\n\n");
- * 
- * 	imprime_matriz(apA,m+1,m+1);
- * 
- * 	printf("\n\n");
- * 
- * 	imprime_vector(apYReg,m+1);
- */
+	/* 
+	 * 	printf("\n\n");
+	 * 
+	 * 	imprime_matriz(apA,m+1,m+1);
+	 * 
+	 * 	printf("\n\n");
+	 * 
+	 * 	imprime_vector(apYReg,m+1);
+	 */
 
 	/* 	eliminacion(apA,apSol,m,m,apYReg);
 	 * 
@@ -121,14 +121,24 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 	 * 
 	 */
 
-	double a_data[] = {  6,  15,  55, 
-			    15,  55, 225, 
-                      	    55, 225, 979 };
-
+	/* 	double a_data[] = {  6,  15,  55, 
+	 * 			    15,  55, 225, 
+	 *                       	    55, 225, 979 };
+	 */
 	int dim = m+1;
 
+	//gsl_matrix * mm = gsl_matrix_alloc (dim, dim);
+	
+	double * mm;
+
+	mm = crear_vector(dim * dim);
+
+	for (i = 0; i < dim; i++)
+		for (j = 0; j < dim; j++)
+			mm[i*dim+j] = apA[i][j];
+
 	gsl_matrix_view ma
-		= gsl_matrix_view_array (a_data,dim, dim);
+		= gsl_matrix_view_array (mm, dim, dim);
 
 	gsl_vector_view b
 		= gsl_vector_view_array (apYReg, dim);
@@ -153,6 +163,8 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 	destruye_matriz(apA,m+1,m+1);
 
 	destruye_vector(apSol);
+
+	destruye_vector(mm);
 
 	destruye_vector(apYReg);
 
