@@ -103,39 +103,22 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 	 *  para la solucion del sistema de ecuaciones lineals para obtener el valor de los
 	 *  coeficientes de la funcion
 	 *-----------------------------------------------------------------------------*/
-	/* 
-	 * 	printf("\n\n");
-	 * 
-	 * 	imprime_matriz(apA,m+1,m+1);
-	 * 
-	 * 	printf("\n\n");
-	 * 
-	 * 	imprime_vector(apYReg,m+1);
-	 */
+	  
+	int dim = m+1; //dimension de la matriz A
 
-	/* 	eliminacion(apA,apSol,m,m,apYReg);
-	 * 
-	 * 	sustitucion(apA, apSol, m, m, apYReg);
-	 * 
-	 * 	imprime_vector(apSol, m+1);
-	 * 
-	 */
+	double * mm; //Apuntador para el arreglo que utilizan las funciones GSL
 
-	/* 	double a_data[] = {  6,  15,  55, 
-	 * 			    15,  55, 225, 
-	 *                       	    55, 225, 979 };
-	 */
-	int dim = m+1;
+	mm = crear_vector(dim * dim); // Se crea un vector del tamanio correspondiente a el numero de coeficientes de las ecs normales
 
-	//gsl_matrix * mm = gsl_matrix_alloc (dim, dim);
-	
-	double * mm;
 
-	mm = crear_vector(dim * dim);
+	/*-----------------------------------------------------------------------------
+	 * Estos bucles asignan cada uno de los elementos del arreglo de 2 dimensiones
+	 * a el vector mm debido a que GSL trabaja con vectores unidimensionales
+	 *-----------------------------------------------------------------------------*/
 
 	for (i = 0; i < dim; i++)
 		for (j = 0; j < dim; j++)
-			mm[i*dim+j] = apA[i][j];
+			mm[i*dim+j] = apA[i][j]; 
 
 	gsl_matrix_view ma
 		= gsl_matrix_view_array (mm, dim, dim);
@@ -153,8 +136,13 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 
 	gsl_linalg_LU_solve (&ma.matrix, p, &b.vector, x);
 
-	printf ("x = \n");
+	printf ("\n\nLos coeficientes del Polinomio son: \n");
 	gsl_vector_fprintf (stdout, x, "%g");
+
+	printf("\n\nEl polinomio de %d grado es: \n\n",m);
+
+	for(i=0;i<=m+1
+	printf("f(x) = %g + %gx + %gx^2",x);
 
 	gsl_permutation_free (p);
 	gsl_vector_free (x);
