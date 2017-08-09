@@ -140,9 +140,17 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 	gsl_vector_fprintf (stdout, x, "%g");
 
 	printf("\n\nEl polinomio de %d grado es: \n\n",m);
+	
+	printf("f(x) = "); 
 
-	for(i=0;i<=m+1
-	printf("f(x) = %g + %gx + %gx^2",x);
+	for( i=0; i < dim ; i++)
+	{
+		printf(" %g + %gx", gsl_vector_get(x,i), gsl_vector_get(x,i+1));
+		
+		if ( i >= 2 ) {
+			printf(" + %gx^%d",gsl_vector_get(x,1) ,i ); 
+		}
+	}
 
 	gsl_permutation_free (p);
 	gsl_vector_free (x);
