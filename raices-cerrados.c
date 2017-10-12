@@ -53,6 +53,11 @@ printf("Metodo de Biseccion");
           *ea = fabs((xr-xrold)/xr)*100;
       }    
       
+      //Se imprimen los datos de la tabla si el usuario lo desea, tabla == 1
+      if ( tabla == 1 ) {
+           printf ("| %2d | %12.8lf | %12.8lf | %12.8lf | %12.8lf | %12.8lf\n", *iter, xa, xb, xr, *ea, evaluator_evaluate_x(f,xr) );
+	    }
+
       //test = f(xa)*f(xr);
       test = evaluator_evaluate_x (f,xa) * evaluator_evaluate_x(f,xr);  
       if (test < 0)
@@ -62,10 +67,6 @@ printf("Metodo de Biseccion");
       else
           *ea = 0;
 
-      //Se imprimen los datos de la tabla si el usuario lo desea, tabla == 1
-      if ( tabla == 1 ) {
-           printf ("| %2d | %12.8lf | %12.8lf | %12.8lf | %12.8lf | %12.8lf\n", *iter, xa, xb, xr, *ea, evaluator_evaluate_x(f,xr) );
-	    }
   }while((*ea > es ) && (*iter <= imax));
 
   /*  Destroy evaluators.  */
