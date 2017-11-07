@@ -2,7 +2,7 @@
 #include "prototipos.h"
 #include <gsl/gsl_linalg.h>
 
-/* 
+/** 
  * ===  FUNCTION  ======================================================================
  *         Name:  regresion_entrada
  *  Description:  
@@ -38,7 +38,7 @@ regresion_entrada ( void )
 }		/* -----  end of function regresion_entrada  ----- */
 
 
-/* 
+/** 
  * ===  FUNCTION  ======================================================================
  *         Name:  regresion_poli
  *  Description:  
@@ -98,7 +98,7 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 	}
 
 
-	/*-----------------------------------------------------------------------------
+	/**-----------------------------------------------------------------------------
 	 *  Una vez obtenidas las ecuaciones normales se procede a realizar el metodo de gauss
 	 *  para la solucion del sistema de ecuaciones lineals para obtener el valor de los
 	 *  coeficientes de la funcion
@@ -136,19 +136,19 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 
 	gsl_linalg_LU_solve (&ma.matrix, p, &b.vector, x);
 
-	printf ("\n\nLos coeficientes del Polinomio son: \n");
+	printf ("\n\nLos coeficientes del Polinomio son: \n\n");
 	gsl_vector_fprintf (stdout, x, "%g");
 
-	printf("\n\nEl polinomio de %d grado es: \n\n",m);
+	printf("\nEl polinomio de %d grado es: \n\n",m);
 	
 	printf("f(x) = "); 
 
-	for( i=0; i < dim ; i++)
+	printf(" %g",gsl_vector_get(x,0));
+
+	for( i=1; i < dim ; i++)
 	{
-		printf(" %g + %gx", gsl_vector_get(x,i), gsl_vector_get(x,i+1));
-		
-		if ( i >= 2 ) {
-			printf(" + %gx^%d",gsl_vector_get(x,1) ,i ); 
+		if ( i >= 1 ) {
+			printf(" + %gx^%d",gsl_vector_get(x,i) ,i ); 
 		}
 	}
 
