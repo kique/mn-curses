@@ -83,67 +83,65 @@ printf("Metodo de Biseccion");
 
 double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla, char buffer[])
 {
-  double xr=xa, xrold;
+  double  xr,xrold,test;
   
-  void *f;		/*  Evaluators for function and function derivative.  */
+    void *f;		/*  Evaluators for function and function derivative.  */
  
   /*  Create evaluator for function.  */
-  f = evaluator_create (buffer);
-  assert (f);
-  
-  printf("Metodo de la Regla Falsa");
+    f = evaluator_create (buffer);
+    assert (f);
 
-  if ( tabla == 1 )
+printf("Metodo la Regla Falsa");
+
+  //Se imprime la cabecera de la tabla solo si lo desea el usuario tabla == 1
+  if(tabla == 1)
   {
-      printf ("\n\n|  i  |    xa    |    xr    |    xb    |     ea     |    f(xr)   | \n");
-      printf ("________________________________________________________________________\n");
+
+      printf ("\n\n|  i |      xa      |      xb      |      xr      |      ea      |     f(xr)    | \n");
+      printf ("____________________________________________________________________________________\n");
+ 
   }
 
-  *iter = 0;
+ *iter= 0;
+  //xr = (xa + xb)/2.0;
+  xr=0;
+  do{
+      xrold = xr;
 
-  if (evaluator_evaluate_x(f,xa)*evaluator_evaluate_x(f,xb) < 0)
-  {
-
-    while( *iter < imax )
-	{
-        
-        xrold=xr;
-        xr = xb - (evaluator_evaluate_x(f,xb)*(xa - xb))/(evaluator_evaluate_x(f,xa) - evaluator_evaluate_x(f,xb));
-       
-        if (xr != 0)
-        {
-             *ea = fabs((xr-xrold)/xr)*100;
-        }      
- 
-        if (evaluator_evaluate_x(f,xa)*evaluator_evaluate_x(f,xr)<0)
-          {
-            xb = xr;
-          }
-        else
-          {
-            xa = xr;
-          }
-        *iter = *iter + 1;
-        
-        if ( tabla == 1 ) {
-            printf ("| %3d | %8.4f | %8.4f | %8.4f | %8.4f | %8.4f |\n",*iter,xa, xr, xb, *ea, evaluator_evaluate_x(f,xr) );
+      xr = xb - (evaluator_evaluate_x(f,xb)*(xa - xb))/(evaluator_evaluate_x(f,xa) - evaluator_evaluate_x(f,xb));
+      
+      *iter = *iter + 1;
+      
+      if (xr != 0)
+      {
+          *ea = fabs((xr-xrold)/xr)*100;
+      }    
+      
+      //Se imprimen los datos de la tabla si el usuario lo desea, tabla == 1
+      if ( tabla == 1 ) {
+           printf ("| %2d | %12.8lf | %12.8lf | %12.8lf | %12.8lf | %12.8lf\n", *iter, xa, xb, xr, *ea, evaluator_evaluate_x(f,xr) );
 	    }
 
-        if ( fabs(*ea) <= es )
-        {
-          break;
-        }
-	}
-    
+      //test = f(xa)*f(xr);
+      test = evaluator_evaluate_x (f,xa) * evaluator_evaluate_x(f,xr);  
+      if (test < 0)
+          xb = xr;
+      else if(test > 0)
+          xa = xr;
+      else
+          *ea = 0;
+
+  }while((*ea > es ) && (*iter <= imax));
+
+  /*  Destroy evaluators.  */
   evaluator_destroy (f);
+
   if ( tabla == 1 ) {
-        printf ("\n\nLa Raiz es %6.4lf\n",xr);
-        return 0;
+      printf ("\n\nLa Raiz es %6.4lf\n",xr);
+      return 0;
   }
   else
-       return xr;
-  }
+      return xr;
 
-  return 0;
 }
 
