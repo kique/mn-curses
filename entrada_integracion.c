@@ -38,7 +38,7 @@ entrada_integracion ( void )
 	
 		
 	for ( i = 0; i < n; i++ ) {
-		fx[i] = evaluator_evaluate_x(f,a + i*h); //Se incrementa h veces desde el valor inicial
+		fx[i] = evaluator_evaluate_x(f2,a + i*h); //Se incrementa h veces desde el valor inicial
 	}
 
 	
@@ -46,6 +46,7 @@ entrada_integracion ( void )
 	printf("\nEl valor de la integral es: %lf", TrapecioM(h,n,fx));
   	
 	/*  Destroy evaluators.  */
-  	evaluator_destroy (f);
+  	evaluator_destroy (f2);
 
+	A
 }		/* -----  end of function entrada_integracion  ----- */

@@ -32,6 +32,7 @@ biseccion	raices-cerrados.c	/^double biseccion(double xa, double xb, double es, 
 compilation_database_folder	.ycm_extra_conf.py	/^compilation_database_folder = ''$/;"	v
 crear_matriz	io_matriz.c	/^crear_matriz (int filas, int columnas )$/;"	f
 crear_vector	io_matriz.c	/^crear_vector (int tam )$/;"	f
+ctrl_menu_integracion	func_menus.c	/^ctrl_menu_integracion ( void )$/;"	f
 ctrl_menu_raices	func_menus.c	/^ctrl_menu_raices ( void )$/;"	f
 ctrl_menu_sel	func_menus.c	/^ctrl_menu_sel ( void )$/;"	f
 database	.ycm_extra_conf.py	/^  database = None$/;"	v
@@ -61,6 +62,7 @@ lee_matriz	io_matriz.c	/^lee_matriz ( double **m, int filas, int columnas )$/;"	
 lee_vector	io_matriz.c	/^lee_vector ( double *v, int tam )$/;"	f
 main	main.c	/^int main()$/;"	f
 menu	menus.c	/^void menu(void)$/;"	f
+menu_integracion	menus.c	/^menu_integracion ( void )$/;"	f
 menu_raices	menus.c	/^menu_raices ( void )$/;"	f
 newtonrap	raices-abiertos.c	/^double newtonrap(double x0, double es, double *ea, int imax, int *iter, int tabla, char *buffer, char *buffer2)$/;"	f
 os	.ycm_extra_conf.py	/^import os$/;"	i
