@@ -48,5 +48,4 @@ entrada_integracion ( void )
 	/*  Destroy evaluators.  */
   	evaluator_destroy (f2);
 
-	A
 }		/* -----  end of function entrada_integracion  ----- */
