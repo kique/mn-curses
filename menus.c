@@ -56,3 +56,27 @@ menu_raices ( void )
     printf("\n\nZ.- Salir\n\n");
 
 }		/* -----  end of function menu_raices  ----- */
+
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  menu_integracion
+ *  Description:  Menu que imprime las opciones de los metodos de integración
+ * =====================================================================================
+ */
+	void
+menu_integracion ( void )
+{
+	printf ( "Metodos de integracion numerica" );
+	printf ( "\n\nSeleccione una Opcion:" );
+	printf ( "\nA.- Metodo del Trapecio - Multiple" );
+	printf ( "\n" );
+	printf ( "\n" );
+	printf ( "\n" );
+	printf ( "\n" );
+	printf ( "\n" );
+	printf ( "\n" );
+	return ;
+}		/* -----  end of function menu_integracion  ----- */
+
+

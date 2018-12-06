@@ -160,3 +160,51 @@ ctrl_menu_sel ( void )
   }while(resp=='s');
 
 }		/* -----  end of function menu_sel  ----- */
+
+
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  ctrl_menu_integracion
+ *  Description:  Control del menu de Metodos de Integracion 
+ * =====================================================================================
+ */
+  void
+ctrl_menu_integracion ( void )
+{
+  char opc,resp;
+
+  do{
+    system("clear");
+    menu_integracion();
+    scanf(" %c",&opc);
+
+    switch(toupper(opc))
+    {
+      case 'A':
+        //Metodo de Trapecio Multiple
+        entrada_integracion();
+        break;
+      case 'B':
+        //Entrada metodo de 
+        break;
+      case 'C':
+        //
+        break;
+      case 'D':
+        //
+        break;
+      case 'E':
+        //
+        break;
+      case 'Z':
+        break;
+
+      default:
+        printf("\nOpcion Invalida\n");
+    }
+    printf("\n\nDeseas realizar otro calculo?: (s/n)");
+    scanf(" %c",&resp);
+  }while(resp=='s');
+
+}		/* -----  end of function menu_sel  ----- */

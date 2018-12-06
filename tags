@@ -1,0 +1,78 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BUFFER_SIZE	grafica.c	24;"	d	file:
+BUFFER_SIZE	prototipos.h	4;"	d
+CC	makefile	/^CC = gcc # Compiler to use$/;"	m
+DirectoryOfThisScript	.ycm_extra_conf.py	/^def DirectoryOfThisScript():$/;"	f
+FUENTES	makefile	/^FUENTES=\\$/;"	m
+FlagsForFile	.ycm_extra_conf.py	/^def FlagsForFile( filename, **kwargs ):$/;"	f
+GetCompilationInfoForFile	.ycm_extra_conf.py	/^def GetCompilationInfoForFile( filename ):$/;"	f
+HEADER_H_INCLUDED	header.h	2;"	d
+INCLUDES	makefile	/^INCLUDES = -I\/usr\/include\/plplot -I\/usr\/local\/include -I\/usr\/local\/lib # Directory for header file$/;"	m
+IsHeaderFile	.ycm_extra_conf.py	/^def IsHeaderFile( filename ):$/;"	f
+MAX	plcdemos.h	33;"	d
+MIN	plcdemos.h	37;"	d
+M_PI	plcdemos.h	27;"	d
+MakeRelativePathsInFlagsAbsolute	.ycm_extra_conf.py	/^def MakeRelativePathsInFlagsAbsolute( flags, working_directory ):$/;"	f
+NSIZE	grafica.c	23;"	d	file:
+NewtonInt	interpolacion.c	/^void NewtonInt(double *pX, double *pY, int n, double xi, double *ptrYint, double *ptrEa)$/;"	f
+OBJS	makefile	/^OBJS = ${FUENTES:.c=.o} # List of objects to be build$/;"	m
+OPTIONS	makefile	/^OPTIONS = -O2 -g -Wall -lm -lncurses -lplplot -lmatheval -lcdk -lgsl -lgslcblas# -g for debug, -O2 for optimise and -Wall additional messages$/;"	m
+PI	plcdemos.h	23;"	d
+PROTOTIPOS_H_INCLUDED	prototipos.h	2;"	d
+ROUND	plcdemos.h	41;"	d
+SOURCE_EXTENSIONS	.ycm_extra_conf.py	/^SOURCE_EXTENSIONS = [ '.C', '.cpp', '.cxx', '.cc', '.c', '.m', '.mm' ]$/;"	v
+TrapecioM	integracion.c	/^TrapecioM ( double h, int n, double *f )$/;"	f
+__PLCDEMOS_H__	plcdemos.h	8;"	d
+biseccion	raices-cerrados.c	/^double biseccion(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla, char buffer[])$/;"	f
+compilation_database_folder	.ycm_extra_conf.py	/^compilation_database_folder = ''$/;"	v
+crear_matriz	io_matriz.c	/^crear_matriz (int filas, int columnas )$/;"	f
+crear_vector	io_matriz.c	/^crear_vector (int tam )$/;"	f
+ctrl_menu_raices	func_menus.c	/^ctrl_menu_raices ( void )$/;"	f
+ctrl_menu_sel	func_menus.c	/^ctrl_menu_sel ( void )$/;"	f
+database	.ycm_extra_conf.py	/^  database = None$/;"	v
+database	.ycm_extra_conf.py	/^  database = ycm_core.CompilationDatabase( compilation_database_folder )$/;"	v
+destruye_matriz	io_matriz.c	/^void destruye_matriz(double **m, int filas, int columnas)$/;"	f
+destruye_vector	io_matriz.c	/^destruye_vector ( double *v )$/;"	f
+df	funciones.c	/^double df(double x)$/;"	f
+eliminacion	op_matrices.c	/^void eliminacion(double **a, double *x, int filas, int columnas, double *b)$/;"	f
+eliminacion_didactica	op_matrices.c	/^void eliminacion_didactica(double **a, double *x, int filas, int columnas, double *b)$/;"	f
+entrada_abiertos	entrada_raices.c	/^entrada_abiertos(int op_met, char *buffer)$/;"	f
+entrada_cerrados	entrada_raices.c	/^entrada_cerrados (int op_met, char *buffer)$/;"	f
+entrada_difdivnewton	interpolacion.c	/^void entrada_difdivnewton(void)$/;"	f
+entrada_integracion	entrada_integracion.c	/^entrada_integracion ( void )$/;"	f
+f	funciones.c	/^double f(double x)$/;"	f
+flags	.ycm_extra_conf.py	/^flags = [$/;"	v
+gauss_jordan	gauss.c	/^gauss_jordan ( void )$/;"	f
+gauss_simple	gauss.c	/^gauss_simple ( void )$/;"	f
+gf	funciones.c	/^double gf(double x)$/;"	f
+grafica	grafica.c	/^grafica( void )$/;"	f
+imprime_matriz	io_matriz.c	/^imprime_matriz ( double **m, int filas, int columnas )$/;"	f
+imprime_matriz_aumentada	io_matriz.c	/^imprime_matriz_aumentada ( double **a, double *b, int tam )$/;"	f
+imprime_vector	io_matriz.c	/^imprime_vector ( double *v, int tam )$/;"	f
+isnan	plcdemos.h	64;"	d
+isnan	plcdemos.h	71;"	d
+lee_expresion	entrada_raices.c	/^lee_expresion ( char *buffer  )$/;"	f
+lee_matriz	io_matriz.c	/^lee_matriz ( double **m, int filas, int columnas )$/;"	f
+lee_vector	io_matriz.c	/^lee_vector ( double *v, int tam )$/;"	f
+main	main.c	/^int main()$/;"	f
+menu	menus.c	/^void menu(void)$/;"	f
+menu_raices	menus.c	/^menu_raices ( void )$/;"	f
+newtonrap	raices-abiertos.c	/^double newtonrap(double x0, double es, double *ea, int imax, int *iter, int tabla, char *buffer, char *buffer2)$/;"	f
+os	.ycm_extra_conf.py	/^import os$/;"	i
+pfijo	raices-abiertos.c	/^double pfijo(double x0, double es, double *ea, int imax, int *iter, int tabla, char *buffer)$/;"	f
+regresion_entrada	regresion.c	/^regresion_entrada ( void )$/;"	f
+regresion_poli	regresion.c	/^regresion_poli ( int m, int n, double *apX, double *apY )$/;"	f
+rfalsa	raices-cerrados.c	/^double rfalsa(double xa, double xb, double es, double *ea, int imax, int *iter, int tabla, char buffer[])$/;"	f
+secante	raices-abiertos.c	/^double secante(double x0, double x1, double es, double *ea, int imax, int *iter, int tabla, char *buffer)$/;"	f
+snprintf	plcdemos.h	50;"	d
+snprintf	plcdemos.h	58;"	d
+snscanf	plcdemos.h	51;"	d
+snscanf	plcdemos.h	59;"	d
+sustitucion	op_matrices.c	/^void sustitucion(double **a, double *x, int filas, int columnas, double *b)$/;"	f
+sustitucion_didactica	op_matrices.c	/^void sustitucion_didactica(double **a, double *x, int filas, int columnas, double *b)$/;"	f
+ycm_core	.ycm_extra_conf.py	/^import ycm_core$/;"	i

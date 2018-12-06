@@ -40,7 +40,7 @@ entrada_cerrados (int op_met, char *buffer)
   system("clear");
 
   printf("Programa para calcular una raiz por el Metodo de %s\n", (op_met == 1)? strcpy(id_metodo,"Biseccion"):strcpy(id_metodo,"Falsa Posicion"));
-  printf("\nIntroduzca al funcion que desa utilizar: ");
+  printf("\nIntroduzca la funcion que desa utilizar: ");
 
   
 

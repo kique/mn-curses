@@ -5,9 +5,11 @@
 
  void menu(void);
  void menu_raices(void);
+ void menu_integracion(void);
  void menu_sel(void);
  void ctrl_menu_raices ( void );
  void ctrl_menu_sel ( void );
+ void ctrl_menu_integracion( void );
  void entrada_cerrados (int op_met, char *);
  void entrada_abiertos (int op_met, char *);
  double biseccion(double, double, double, double *, int, int *, int ,char *);

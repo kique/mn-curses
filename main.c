@@ -57,9 +57,10 @@ int main()
         entrada_difdivnewton();
 	break;
       case 'F':
-//        menu_integracion();
 	break;
       case 'G':
+        menu_integracion();
+	ctrl_menu_integracion();
         break;
       case 'H':
         break;
