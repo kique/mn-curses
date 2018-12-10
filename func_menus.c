@@ -65,7 +65,6 @@ ctrl_menu_raices ( void )
 	    lee_expresion(expresion1);
     }
 
-
     switch(toupper(opc))
     {
       case 'A':
@@ -160,8 +159,6 @@ ctrl_menu_sel ( void )
   }while(resp=='s');
 
 }		/* -----  end of function menu_sel  ----- */
-
-
 
 /* 
  * ===  FUNCTION  ======================================================================

@@ -32,29 +32,24 @@
 entrada_cerrados (int op_met, char *buffer)
 {
 
-
   int imax,iter=0,tabla;
   double xa,xb,ea=100,es,raiz;
   char id_metodo[20];
 
   system("clear");
 
-  printf("Programa para calcular una raiz por el Metodo de %s\n", (op_met == 1)? strcpy(id_metodo,"Biseccion"):strcpy(id_metodo,"Falsa Posicion"));
-  printf("\nIntroduzca la funcion que desa utilizar: ");
+  printf("Programa para calcular la raiz de %s \n\nUsando el Método de %s\n",buffer, (op_met == 1)? strcpy(id_metodo,"Biseccion"):strcpy(id_metodo,"Falsa Posicion"));
 
-  
-
-  printf ("\nDe el valor del limite izquierdo xa: ");
+  printf ("\n\tDar el valor del limite izquierdo xa: ");
   scanf("%lf",&xa);
-  printf ("\nDe el valor del limite derecho xb: ");
+  printf ("\n\tDar el valor del limite derecho xb: ");
   scanf("%lf",&xb);
-  printf ("\nDe el valor del error relativo porcentual deseado es: ");
+  printf ("\n\tDar el valor del error relativo porcentual deseado es: ");
   scanf("%lf",&es);
-  printf ("\nDe el numero maximo de iteraciones: ");
+  printf ("\n\tDar el numero maximo de iteraciones: ");
   scanf("%d",&imax);
-  printf ("\nDesea imprimir tabla de resultados o solamente la raiz? (1=tabla / 0=raiz ): ");
+  printf ("\n\tDesea imprimir tabla de resultados o solamente la raiz? (1=tabla / 0=raiz ): ");
   scanf("%d",&tabla);
-
 
   if(op_met == 1)
   {
@@ -197,13 +192,11 @@ entrada_abiertos(int op_met, char *buffer)
           printf("\nOpcion invalida, vuelva a intentar");
       }
 
-
       break;
 
     default:	
       break;
   }				/* -----  end switch  ----- */
-
 
   return;
 }		/* -----  end of function entrada_cerrados  ----- */
@@ -221,7 +214,7 @@ lee_expresion ( char *buffer  )
   int length;			/*  Length of above buffer. */
 
   /* Se lee la expresion matematica */
-  printf ("f(x) = ");
+  printf ("Introduzca la función a analizar: ");
   scanf("%s",buffer);
 
   //    fgets (buffer, BUFFER_SIZE, stdin);
