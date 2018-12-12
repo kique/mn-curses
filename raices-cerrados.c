@@ -30,7 +30,7 @@ double biseccion(double xa, double xb, double es, double *ea, int imax, int *ite
     f = evaluator_create (buffer);
     assert (f);
 
-printf("\n\nTabla de resultados usando el Metodo de Biseccion para la ecuación %s con xi= %8.4f y xf= %8.4f",buffer,xa,xb);
+printf("\n\nTabla de resultados usando el Metodo de Biseccion para la ecuación f(x)= %s \nen el intervalo [%8.4f , %8.4f]",buffer,xa,xb);
 
   //Se imprime la cabecera de la tabla solo si lo desea el usuario tabla == 1
   if(tabla == 1)

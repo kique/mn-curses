@@ -214,7 +214,7 @@ lee_expresion ( char *buffer  )
   int length;			/*  Length of above buffer. */
 
   /* Se lee la expresion matematica */
-  printf ("Introduzca la función a analizar: ");
+  printf ("Introduzca la función a analizar f(x)= ");
   scanf("%s",buffer);
 
   //    fgets (buffer, BUFFER_SIZE, stdin);
