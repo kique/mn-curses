@@ -30,20 +30,27 @@
  double df(double);
  double gf(double);
 
+ //Funciones para aareglos dinamicos
+
+ double * crear_vector (int tam );
+ void lee_vector ( double *v, int tam );
+ void imprime_vector ( double *, int);
+ void destruye_vector ( double *v );
+
+ double ** crear_matriz (int filas, int columnas );
+ void lee_matriz ( double **m, int filas, int columnas );
+ void imprime_matriz ( double **m, int filas, int columnas );
+ void destruye_matriz(double **m, int filas, int columnas);
+
+ void imprime_matriz_aumentada ( double **a, double *b, int tam );
+
  void gauss_simple ( void );
  void gauss_jordan ( void );
  void eliminacion(double **a, double *x, int filas, int columnas, double *b);
  void sustitucion(double **a, double *x, int filas, int columnas, double *b);
- double ** crear_matriz (int filas, int columnas );
- double * crear_vector (int tam );
- void destruye_matriz(double **m, int filas, int columnas);
- void lee_matriz ( double **m, int filas, int columnas );
- void lee_vector ( double *v, int tam );
- void imprime_matriz ( double **m, int filas, int columnas );
- void imprime_vector ( double *, int);
- void destruye_vector ( double *v );
+ 
+
  void ctrl_menu_sel ( void );
- void imprime_matriz_aumentada ( double **a, double *b, int tam );
  
  void sustitucion_didactica(double **a, double *x, int filas, int columnas, double *b);
  void eliminacion_didactica(double **a, double *x, int filas, int columnas, double *b);
