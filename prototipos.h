@@ -30,7 +30,7 @@
  double df(double);
  double gf(double);
 
- //Funciones para aareglos dinamicos
+ //Funciones para arreglos dinamicos
 
  double * crear_vector (int tam );
  void lee_vector ( double *v, int tam );
