@@ -14,3 +14,9 @@ plplot-libs
 Instruccion Fedora 25
 
 dnf install ncurses-devel libmatheval libmatheval-devel cdk cdk-devel gsl gsl-devel plplot plplot-devel plplot-libs
+
+Arch Linux
+AUR
+https://aur.archlinux.org/libmatheval.git
+https://aur.archlinux.org/libcdk.git
+https://aur.archlinux.org/plplot.git
