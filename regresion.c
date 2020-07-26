@@ -97,6 +97,8 @@ regresion_poli ( int m, int n, double *apX, double *apY )
 
 	}
 
+	imprime_matriz_aumentada(apA,apYReg,m+1);
+
 
 	/**-----------------------------------------------------------------------------
 	 *  Una vez obtenidas las ecuaciones normales se procede a realizar el metodo de gauss

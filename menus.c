@@ -7,6 +7,7 @@
  
 
 #include "header.h"
+#include "prototipos.h"
 
 void menu(void)
 {
@@ -80,3 +81,24 @@ menu_integracion ( void )
 }		/* -----  end of function menu_integracion  ----- */
 
 
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  menu_sel
+ *  Description:  Menu que imprime las opciones de los metodos de SEL
+ * =====================================================================================
+ */
+	void
+menu_sel ( void )
+{
+	printf ( "Metodos de SEL" );
+	printf ( "\n\nSeleccione una Opcion:" );
+	printf ( "\nA.- Metodo de Gauss Simple" );
+	printf ( "\nB.- Metodo de Gauss Jordan" );
+	printf ( "\n" );
+	printf ( "\n" );
+	printf ( "\n" );
+	printf ( "\n" );
+	printf ( "\n" );
+	return ;
+}		/* -----  end of function menu_integracion  ----- */

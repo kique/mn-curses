@@ -18,6 +18,8 @@ entrada_integracion ( void )
 
 	void *f2;  /*  Evaluators for function and function derivative.  */
 	
+	printf ( "\nEscriba la expresion a integrar:" );
+	lee_expresion(expresion);
 
 	printf("\nDar el valor inicial del intervalo: ");
 	scanf("%lf",&a);
@@ -25,8 +27,6 @@ entrada_integracion ( void )
 	scanf("%lf",&b);
 	printf("\nDar el numero de segmentos: ");
 	scanf("%d",&n);
-	printf ( "\nEscriba la expresion a integrar:" );
-	lee_expresion(expresion);
  
   	/*  Create evaluator for function.  */
     	f2 = evaluator_create (expresion);
@@ -41,7 +41,9 @@ entrada_integracion ( void )
 		fx[i] = evaluator_evaluate_x(f2,a + i*h); //Se incrementa h veces desde el valor inicial
 	}
 
-	
+	imprime_vector(fx,n);
+	system("read -p \"PResione una tecla para continuar\" ");
+		
 
 	printf("\nEl valor de la integral es: %lf", TrapecioM(h,n,fx));
   	

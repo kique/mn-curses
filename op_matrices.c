@@ -141,12 +141,13 @@ void sustitucion_didactica(double **a, double *x, int filas, int columnas, doubl
     for(i=n-2;i>=0;i--)
     {
         sum=b[i];
-        printf("\nx[%d] = (%.6lf ",i+1,sum);
+        printf("\nx[%d] = ( %.6lf ",i+1,sum);
         for(j=i+1;j<=n-1;j++)
         {
             sum = sum - a[i][j]*x[j];
-            printf("- (%.6lf * %.6lf)", a[i][j],x[j]);
+            printf(" - ( %.6lf * %.6lf )", a[i][j],x[j]);
         }
+	printf(" ) / %.6lf )",a[i][i]);
         x[i] = sum / a[i][i];
         printf(" = %.6lf", x[i]);
     }
